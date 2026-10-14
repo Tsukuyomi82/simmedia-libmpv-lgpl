@@ -188,6 +188,57 @@ def artifact_capacity(lock, output):
         raise ValueError('BLOCKED: full evidence exceeds approved free artifact capacity; no Source omitted')
 
 
+def source_link_record(source, file):
+    # Resolve one component at a time: never follow an unvalidated outside link.
+    source = source.resolve(strict=True)
+    relative = file.relative_to(source)
+    pending = list(relative.parts)
+    current = source
+    seen = set()
+    observed = []
+    while pending:
+        part = pending.pop(0)
+        if part in ('', '.'):
+            continue
+        if part == '..':
+            if current == source:
+                raise ValueError('BLOCKED: Source link leaves component ' + str(relative))
+            current = current.parent
+            continue
+        if part == '.git':
+            raise ValueError('BLOCKED: Source link targets Git metadata ' + str(relative))
+        current = current / part
+        st = current.lstat()
+        if current.is_symlink():
+            if current in seen or len(seen) >= 64:
+                raise ValueError('BLOCKED: cyclic Source link ' + str(relative))
+            seen.add(current)
+            target = os.readlink(current)
+            if (not target or os.path.isabs(target) or '\\' in target
+                    or ':' in target or '\x00' in target):
+                raise ValueError('BLOCKED: invalid Source link ' + str(relative))
+            target.encode('utf-8', errors='strict')
+            observed.append((current, st, target))
+            pending = list(Path(target).parts) + pending
+            current = current.parent
+        elif pending and not current.is_dir():
+            raise ValueError('BLOCKED: Source link non-directory traversal ' + str(relative))
+    if not (current.is_file() or current.is_dir()) or current.is_symlink():
+        raise ValueError('BLOCKED: Source link target is not a regular file/directory ' + str(relative))
+    if not current.resolve(strict=True).is_relative_to(source):
+        raise ValueError('BLOCKED: Source link target escapes ' + str(relative))
+    for path, before, target in observed:
+        after = path.lstat()
+        if ((before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns, before.st_ctime_ns)
+                != (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns, after.st_ctime_ns)
+                or os.readlink(path) != target):
+            raise ValueError('BLOCKED: Source link changed during capture ' + str(relative))
+    target = next(target for path, _, target in observed if path == file)
+    return {'path': relative.as_posix(), 'type': 'symlink', 'target': target,
+            'sha256': hashlib.sha256(target.encode('utf-8')).hexdigest(),
+            'resolved_target': current.relative_to(source).as_posix()}, current
+
+
 def save_final_source_state(lock, root, output):
     destination = output / 'final-source-state'
     destination.mkdir(exist_ok=False)
@@ -195,14 +246,41 @@ def save_final_source_state(lock, root, output):
     git = lock['toolchain']['git']['path']
     for name in lock['active']:
         source = root / 'sources' / name
+        if source.is_symlink():
+            raise ValueError('BLOCKED: Source root symlink ' + name)
         if not source.is_dir():
             continue
         additions = []
-        for file in source.rglob('*'):
+        for file in sorted(source.rglob('*')):
             if '.git' in file.relative_to(source).parts:
                 continue
             if file.is_symlink():
-                raise ValueError('BLOCKED: final Source symlink')
+                try:
+                    record, target = source_link_record(source, file)
+                    if target.is_file():
+                        payload = target.read_bytes()
+                        # Verify the path identity again after reading, before saving.
+                        checked, checked_target = source_link_record(source, file)
+                        if checked != record or checked_target != target or hashlib.sha256(payload).hexdigest() != digest(target):
+                            raise ValueError('BLOCKED: Source link target changed during capture')
+                        record['target_sha256'] = hashlib.sha256(payload).hexdigest()
+                        copied = destination / 'link-targets' / name / record['resolved_target']
+                        copied.parent.mkdir(parents=True, exist_ok=True)
+                        if copied.exists():
+                            if digest(copied) != record['target_sha256']:
+                                raise ValueError('BLOCKED: Source link target capture collision')
+                        else:
+                            with copied.open('xb') as out:
+                                out.write(payload)
+                    inventory.append({'component': name, **record})
+                    if (source / '.git').is_dir():
+                        additions.append(str(file.relative_to(source)))
+                except Exception as error:
+                    write_json(destination / 'link-failure.json',
+                               {'component': name, 'path': file.relative_to(source).as_posix(),
+                                'reason': str(error), 'status': 'BLOCKED'})
+                    raise
+                continue
             if file.is_file() and file.suffix.lower() in ('.c', '.cc', '.cpp', '.h', '.hpp', '.rs', '.inc', '.s', '.asm'):
                 inventory.append({'component': name, 'path': file.relative_to(source).as_posix(), 'sha256': digest(file)})
                 if (source / '.git').is_dir():
