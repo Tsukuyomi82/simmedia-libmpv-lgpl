@@ -15,14 +15,17 @@ import urllib.request
 
 import ci
 
-def run(argv, cwd, evidence, label, env):
+def run(argv, cwd, evidence, label, env, *, capture_text=False):
     if not re.fullmatch(r'[a-zA-Z0-9_.-]+', label):
         raise ValueError('invalid log label')
     ci.write_json(evidence / (label + '.command.json'), {'argv': argv, 'cwd': str(cwd)})
     with (evidence / (label + '.stdout')).open('xb') as stdout, (evidence / (label + '.stderr')).open('xb') as stderr:
         subprocess.run(argv, cwd=cwd, env=env, stdout=stdout, stderr=stderr,
                        timeout=14400, check=True, start_new_session=True)
-    return (evidence / (label + '.stdout')).read_text(errors='strict')
+    # Evidence-only commands keep exact bytes without imposing a text encoding.
+    if not capture_text:
+        return None
+    return (evidence / (label + '.stdout')).read_text(encoding='utf-8', errors='strict')
 
 def unpack(archive, target, strip_components=1, existing_empty=False):
     # Reject traversal, links, devices, duplicate files and existing destinations.
@@ -344,7 +347,7 @@ def prepare(lock, root, evidence):
     with (cargo_config / 'config.toml').open('x') as out:
         out.write(config)
     metadata = run([tools['cargo'], 'metadata', '--manifest-path', str(root / 'sources/subrandr/Cargo.toml'),
-                    '--format-version', '1', '--locked', '--offline'], root, evidence, 'cargo-metadata', env)
+                    '--format-version', '1', '--locked', '--offline'], root, evidence, 'cargo-metadata', env, capture_text=True)
     data = json.loads(metadata)
     expected = {(item['name'], item['version']) for item in lock['rust_crates']}
     for item in data['packages']:
@@ -353,7 +356,7 @@ def prepare(lock, root, evidence):
     ci.write_json(evidence / 'rust-resolved-graph.json', data)
     records = {}
     for name, entry in lock['toolchain'].items():
-        version = run([tools[name], *entry['version_args']], root, evidence, 'version.' + name, env)
+        version = run([tools[name], *entry['version_args']], root, evidence, 'version.' + name, env, capture_text=True)
         if entry['version'] not in version:
             raise ValueError('BLOCKED: tool version differs ' + name)
         records[name] = {'sha256': ci.digest(Path(tools[name])), 'version_output': version}
@@ -513,7 +516,7 @@ def qualify(lock, root, evidence):
     dll = ci.confined(root, lock['dll_output'])
     pe_amd64(dll)
     analysis = run([tools['llvm-readobj'], '--file-headers', '--coff-exports', '--coff-imports', str(dll)],
-                   root, evidence, 'dll-readobj', env)
+                   root, evidence, 'dll-readobj', env, capture_text=True)
     link_inventory(lock, root, evidence, analysis)
     exported = set(re.findall(r'^\s*Name: (mpv_\w+)\s*$', analysis, re.M))
     if not set(lock['required_exports']).issubset(exported):
