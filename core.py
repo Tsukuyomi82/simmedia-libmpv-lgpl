@@ -129,8 +129,24 @@ def bootstrap(lock, root, evidence):
         unpack(archive, dest)
         if item.get('merge_rust_component'):
             component = ci.confined(dest, item['merge_rust_component'])
+            # manifest.in is component-local installer bookkeeping, not runtime
+            # payload. Preserve its exact bytes separately; no overwrite/ignore.
+            manifest = ci.confined(component, 'manifest.in')
+            manifest_dest = evidence / 'rust-installer-manifests' / Path(item['destination']).name / 'manifest.in'
+            manifest_dest.parent.mkdir(parents=True, exist_ok=False)
+            with manifest.open('rb') as inp, manifest_dest.open('xb') as out:
+                shutil.copyfileobj(inp, out)
+            if ci.digest(manifest_dest) != ci.digest(manifest):
+                raise ValueError('BLOCKED: Rust installer manifest copy differs')
+            ci.write_json(manifest_dest.parent / 'receipt.json', {
+                'component': item['merge_rust_component'],
+                'archive_sha256': item['archive_sha256'],
+                'manifest_sha256': ci.digest(manifest_dest),
+                'scope': 'COMPONENT_LOCAL_INSTALLER_METADATA'})
             for source in component.rglob('*'):
                 if not source.is_file():
+                    continue
+                if source.relative_to(component).as_posix() == 'manifest.in':
                     continue
                 target = merged / source.relative_to(component)
                 target.parent.mkdir(parents=True, exist_ok=True)
