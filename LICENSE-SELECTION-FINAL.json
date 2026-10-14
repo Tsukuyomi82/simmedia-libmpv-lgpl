@@ -1,0 +1,2594 @@
+[
+  {
+    "component": "amf-headers",
+    "source_revision": "8c648005e07d4309033282bfd9947df2c7e76104",
+    "source_sha256": "7ce42c97b2de101d91dd80be4338ee6e47bd73541a58d2ccef2425d1044647f0",
+    "license_documents": [
+      {
+        "path": "AMF-8c648005e07d4309033282bfd9947df2c7e76104/LICENSE.txt",
+        "sha256": "eb297397aaa455b5668ab67d216b83828466152dab123fa92384c6ec16b74170",
+        "size": 1747
+      },
+      {
+        "path": "AMF-8c648005e07d4309033282bfd9947df2c7e76104/Thirdparty/amd/AmdDxExt/LICENSE.txt",
+        "sha256": "d8b1b7b1757e8b44ac9cd55cc41736523dd355523900af5f7c0187b485ac62c7",
+        "size": 1096
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "angle-headers",
+    "source_revision": "13357153ce1fb8710c2e3c0f0de22844ddac19af",
+    "source_sha256": "3ce1055c403a135ba76cb8b2459f11be897b500387fd2f5bcba6fbd28a7cd082",
+    "license_documents": [
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/LICENSE",
+        "sha256": "bf4da21bd20bcfb5b60b7ecc67fa864a79be049e21d6178076887f178dd6c71a",
+        "size": 1643
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/common/third_party/xxhash/LICENSE",
+        "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a",
+        "size": 1389
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/libANGLE/renderer/vulkan/shaders/src/third_party/etc_decoder/LICENSE",
+        "sha256": "118be5792e5126839694ca2209c62c71d2d7cd49e7bbb43bbdee9b016fb06094",
+        "size": 1129
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/libANGLE/renderer/vulkan/shaders/src/third_party/ffx_spd/LICENSE",
+        "sha256": "09a7c3fbc0b4ae6a9ccc4ffdcbfa511c14b8647a24f24783838862cf6c226d4e",
+        "size": 1093
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/tests/test_utils/third_party/LICENSE",
+        "sha256": "0e64c1e9cd62f47682caeb545d2943fb4c38a9b2e5d9fd7e3b456973bb430d1b",
+        "size": 10341
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/third_party/ceval/LICENSE",
+        "sha256": "0dd71b8a6d6db0db4dc38a983749e1b2f4bb57aba30141a168042042c4a7b6f8",
+        "size": 1060
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/third_party/libXNVCtrl/LICENSE",
+        "sha256": "31346421254a3e6e12687cf17f19f6357ee73a617fa7b3d3ccefdcbabe49bdd3",
+        "size": 1158
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/src/third_party/volk/LICENSE.md",
+        "sha256": "336f505f8d5aa73ea40b4d798dde86953e9c1f6525757f1d7f18120fea09bb1d",
+        "size": 1066
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/android_system_sdk/LICENSE",
+        "sha256": "8f1bd8841582bdee098eeae9eeb3862d9e7af011e94e54c14aef0568e816be19",
+        "size": 19332
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/colorama/LICENSE",
+        "sha256": "15137d6c822e3ab097093a33c3a39a9df699f373f6438867ad534ff60762a947",
+        "size": 1492
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/flatbuffers/LICENSE",
+        "sha256": "7ec9661a8afafab1eee3523d6f1a193eff76314a5ab10b4ce96aefd87621b0c3",
+        "size": 11342
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/glslang/LICENSE",
+        "sha256": "23353f4505b1c8ce4f8f72fc3b11dc74b4a8a7bf95921d93ff77f227c171a710",
+        "size": 1309
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/proguard/LICENSE",
+        "sha256": "294f58267c6f473c4ce7270bf5c8d34b2003cb43804552459654c36553431276",
+        "size": 18107
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/r8/LICENSE",
+        "sha256": "68834f116f8ff545f05d14753357b620748156d60ee36b26beab4cb3f317efe4",
+        "size": 1491
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/re2/LICENSE",
+        "sha256": "6040cda75d90b1738292a631d89934c411ef7ffd543c4d6a1b7edfc8edf29449",
+        "size": 1558
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/spirv-headers/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/spirv-tools/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/turbine/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/vulkan-headers/LICENSE.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/wayland-protocols/LICENSE",
+        "sha256": "f1a2b233e8a9a71c40f4aa885be08a0842ac85bb8588703c1dd7e6e6502e3124",
+        "size": 1502
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/third_party/wayland/LICENSE",
+        "sha256": "778a9c936b9fa24f3842b6071e3cc5c794d3f7cc6d6fddbf356b6f2202afb6a0",
+        "size": 1225
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/tools/flex-bison/third_party/m4sugar/LICENSE",
+        "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6",
+        "size": 17987
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/tools/flex-bison/third_party/skeletons/LICENSE",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "size": 35147
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/util/android/third_party/LICENSE",
+        "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+        "size": 11357
+      },
+      {
+        "path": "angle-13357153ce1fb8710c2e3c0f0de22844ddac19af/util/windows/third_party/StackWalker/LICENSE",
+        "sha256": "bfec18debedcb337f8af53f143ccf0b1575d0b7c30deaee137f10397eca0d353",
+        "size": 1522
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "aom",
+    "source_revision": "8fbd65b2f354e1d7059f8b1899f3f0373d1b3e2a",
+    "source_sha256": "5099e355572d29ca29633ebaf6cf1b9ffeb8d00eaca4976f905a0e9677a97443",
+    "license_documents": [
+      {
+        "path": "LICENSE",
+        "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2",
+        "size": 1316
+      },
+      {
+        "path": "third_party/fastfeat/LICENSE",
+        "sha256": "499041ddee5227b6f29ca06c17803e5fe24d60f243c69635cd76b7ba08d0ddd5",
+        "size": 1504
+      },
+      {
+        "path": "third_party/googletest/src/LICENSE",
+        "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "size": 1475
+      },
+      {
+        "path": "third_party/highway/LICENSE-BSD3",
+        "sha256": "d25e82e26acd42ca3ccc9993622631163425b869b9e16284226d534cff6470f2",
+        "size": 1515
+      },
+      {
+        "path": "third_party/libwebm/LICENSE.TXT",
+        "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+        "size": 1496
+      },
+      {
+        "path": "third_party/libyuv/LICENSE",
+        "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+        "size": 1506
+      },
+      {
+        "path": "third_party/vector/LICENSE",
+        "sha256": "ff6c857ce2708e87701323078aef115c1872a1f80a9649f86dc899b48083bc60",
+        "size": 1084
+      },
+      {
+        "path": "third_party/x86inc/LICENSE",
+        "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8",
+        "size": 936
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LicenseRef-AOM-BSD-Patent",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "brotli",
+    "source_revision": "392b261debb0f478811ddacb98b118da36b06158",
+    "source_sha256": "a111304c1953503c4d8b62a30dcd84eb091b29b72855c8720b17acc3f2359e43",
+    "license_documents": [
+      {
+        "path": "brotli-392b261debb0f478811ddacb98b118da36b06158/LICENSE",
+        "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+        "size": 1084
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "bzip2",
+    "source_revision": "66c46b8c9436613fd81bc5d03f63a61933a4dcc3",
+    "source_sha256": "3a4cff5f9d197e9e6c6138660afa6b1f9370df0bed135bd949243f6dfc83b3e1",
+    "license_documents": [
+      {
+        "path": "bzip2-66c46b8c9436613fd81bc5d03f63a61933a4dcc3/COPYING",
+        "sha256": "452871c08826ffb38b1a77960f23ef9c4b8b457887c3a6b691b7d42e882426e3",
+        "size": 1895
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LicenseRef-bzip2",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "c-ares",
+    "source_revision": "f4156c12c8b36f5cb8f8a53658d44b24263c6ad1",
+    "source_sha256": "c1f483dd8581c30d5571e7be4efe39c3ea6c375d832d754db4f268287e9a5c45",
+    "license_documents": [
+      {
+        "path": "c-ares-f4156c12c8b36f5cb8f8a53658d44b24263c6ad1/LICENSE.md",
+        "sha256": "460f5e768fda3752ca2169a95df062578a10fb126bfd65f3b9b1a1bed2f84807",
+        "size": 1211
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "curl",
+    "source_revision": "a40991b97c0ce721e85acbe16e16fe79b7b68c51",
+    "source_sha256": "ecd1774e73ac888a067951e3f2a6b80f639f90a03ba036329ef0023486b34249",
+    "license_documents": [
+      {
+        "path": "curl-a40991b97c0ce721e85acbe16e16fe79b7b68c51/COPYING",
+        "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681",
+        "size": 1088
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "curl",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "dav1d",
+    "source_revision": "99f3354ed0b9b4bf3c7c9347318dbcc522c94af5",
+    "source_sha256": "6a28cef0ae853dfe0bb56e23ff248c300e87d7e06632459bc7bb1e1e8b0e3b6f",
+    "license_documents": [
+      {
+        "path": "dav1d-99f3354ed0b9b4bf3c7c9347318dbcc522c94af5/COPYING",
+        "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5",
+        "size": 1317
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "fast_float",
+    "source_revision": "033f64f6088bb00690858ce59bc8c7fd0566384a",
+    "source_sha256": "1aa471c8c7aa71e96873351869e587cde76ba04cda882d11cb28681951027d75",
+    "license_documents": [
+      {
+        "path": "fast_float-033f64f6088bb00690858ce59bc8c7fd0566384a/LICENSE-APACHE",
+        "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06",
+        "size": 10767
+      },
+      {
+        "path": "fast_float-033f64f6088bb00690858ce59bc8c7fd0566384a/LICENSE-BOOST",
+        "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
+        "size": 1337
+      },
+      {
+        "path": "fast_float-033f64f6088bb00690858ce59bc8c7fd0566384a/LICENSE-MIT",
+        "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+        "size": 1079
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "ffmpeg",
+    "source_revision": "615b07170e30d79ad5906418ea49f81c3cbd8457",
+    "source_sha256": "b748787907ad7c821e9958842fcee9e521f43248c1b3478db5c1cfacd8eeca67",
+    "license_documents": [
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/COPYING.GPLv2",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "size": 18092
+      },
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/COPYING.GPLv3",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "size": 35147
+      },
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/COPYING.LGPLv2.1",
+        "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30",
+        "size": 26517
+      },
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/COPYING.LGPLv3",
+        "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+        "size": 7651
+      },
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/LICENSE.md",
+        "sha256": "e6dc72d5665a1ebd6dcc841de59278dad4ca77ecc47b03f1064a55c3e9ea8bb8",
+        "size": 4352
+      },
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/tests/checkasm/ext/LICENSE",
+        "sha256": "a2dc8194271e5989c0622531c645a7b41af5da92eeb2531e4f2a3ec31023bc52",
+        "size": 1402
+      },
+      {
+        "path": "FFmpeg-615b07170e30d79ad5906418ea49f81c3cbd8457/tests/checkasm/ext/src/html_data/LICENSE",
+        "sha256": "0fd2c601fb2ead2add56807b7e32664da8d973b9835a422464f210bfea997a52",
+        "size": 1361
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-3.0-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "fontconfig",
+    "source_revision": "129ddf32994886b52b1ca91fdde305b426b5d526",
+    "source_sha256": "6b824ca015eacf29de0f8d23cc48e3e21d3efaff31ca120efdec956c170d530d",
+    "license_documents": [
+      {
+        "path": "fontconfig-129ddf32994886b52b1ca91fdde305b426b5d526/COPYING",
+        "sha256": "51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067",
+        "size": 8616
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 2,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "freetype2",
+    "source_revision": "e2526d30e673c3063209bcbad8bdfc7fe1745fc3",
+    "source_sha256": "c59ad743e7b8f32aa1adc736a851273ff3cb24938de9762b89a2f14e50d495e9",
+    "license_documents": [
+      {
+        "path": "freetype-e2526d30e673c3063209bcbad8bdfc7fe1745fc3/LICENSE.TXT",
+        "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+        "size": 2149
+      },
+      {
+        "path": "freetype-e2526d30e673c3063209bcbad8bdfc7fe1745fc3/src/tools/no-copyright",
+        "sha256": "3e2c8db4e09e12e9a138ba7ba8c0b762eff36802c6c1273d73ac049d4949a298",
+        "size": 1282
+      },
+      {
+        "path": "freetype-e2526d30e673c3063209bcbad8bdfc7fe1745fc3/src/tools/update-copyright",
+        "sha256": "ae5b05f1d3f5235eb91ce41518be95022443f68bce5d200b6e1cc1fb57a5017e",
+        "size": 383
+      },
+      {
+        "path": "freetype-e2526d30e673c3063209bcbad8bdfc7fe1745fc3/src/tools/update-copyright-year",
+        "sha256": "f3e4b6f122dce96b6ba85c3d600fd19a766ab5e0fd0cbdeee785d0d88f111d3a",
+        "size": 4272
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "FTL",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "fribidi",
+    "source_revision": "24f15eee832eafa5d63319b666d50e488668ce31",
+    "source_sha256": "fcf53064eaef01ce7f95dd87cb190c8e636c51313a9deca438ceac8e9e019afc",
+    "license_documents": [
+      {
+        "path": "fribidi-24f15eee832eafa5d63319b666d50e488668ce31/COPYING",
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "size": 26419
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "glad",
+    "source_revision": "0a7cf1af9e25e02821587bd4095807fc90b6426a",
+    "source_sha256": "4ba9160a405097528b6d308ecf57d4d69126624cadda3ea5f1778e431ce4a273",
+    "license_documents": [
+      {
+        "path": "glad-0a7cf1af9e25e02821587bd4095807fc90b6426a/LICENSE",
+        "sha256": "cbb325cd4ac5bd06717ffa34a322b984f9d285e4c67c8ca1b7380d6ef08c2a77",
+        "size": 3014
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "glslang",
+    "source_revision": "79c91f375f7e278cf99d6925c2b8d3de83ef0f53",
+    "source_sha256": "337ec17a86e2f7c4377673c03acf7eb40d85c624bef10cc0ff4f0e5719c7edbc",
+    "license_documents": [
+      {
+        "path": "glslang-79c91f375f7e278cf99d6925c2b8d3de83ef0f53/LICENSE.txt",
+        "sha256": "17e70c676e1521ff3e4686f04a2053d93a7e28a33be8de7ec37ab0ff72feb677",
+        "size": 54615
+      },
+      {
+        "path": "glslang-79c91f375f7e278cf99d6925c2b8d3de83ef0f53/license-checker.cfg",
+        "sha256": "0b7c936ff1270fb5089750e326f732ce2f08b18e804dc8847aa44561d0a7a277",
+        "size": 1908
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause AND BSD-2-Clause AND MIT AND Apache-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE",
+    "selection_boundary": "Core, preprocessor and shaderc-vendored code; optional external tests are not enabled; retain composite LICENSE.txt"
+  },
+  {
+    "component": "graphengine",
+    "source_revision": "91c6af4c795c5396d8b974f24b4d2e2ecca04e2d",
+    "source_sha256": "412030b824b82ea623d19f8cce0364288e2bf7d6fba0a906473671c249a08730",
+    "license_documents": [
+      {
+        "path": "graphengine-91c6af4c795c5396d8b974f24b4d2e2ecca04e2d/COPYING",
+        "sha256": "7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40",
+        "size": 484
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "WTFPL",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "harfbuzz",
+    "source_revision": "e8ed626526508f8c24c095f82198b52056ed28c4",
+    "source_sha256": "836d10a05eb89efa0397dbdcfac979740e36c70aeea7b688a068e966bd92be21",
+    "license_documents": [
+      {
+        "path": "harfbuzz-e8ed626526508f8c24c095f82198b52056ed28c4/COPYING",
+        "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+        "size": 1971
+      },
+      {
+        "path": "harfbuzz-e8ed626526508f8c24c095f82198b52056ed28c4/perf/texts/COPYING",
+        "sha256": "cf977e70247d5fa9d44955e4d8ed23b503c31f78570f62136756278c2cfcb3c3",
+        "size": 1289
+      },
+      {
+        "path": "harfbuzz-e8ed626526508f8c24c095f82198b52056ed28c4/src/ms-use/COPYING",
+        "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+        "size": 1141
+      },
+      {
+        "path": "harfbuzz-e8ed626526508f8c24c095f82198b52056ed28c4/test/COPYING",
+        "sha256": "9b35b8485f69cd298fccbb3c40a827dc06cf1185553bef827903497d2944a8d7",
+        "size": 4370
+      },
+      {
+        "path": "harfbuzz-e8ed626526508f8c24c095f82198b52056ed28c4/test/shape/data/aots/COPYING",
+        "sha256": "f55f74bf740db07bb032a90aa74af4307adea3d489c1ccba12453cf0c0a764cb",
+        "size": 593
+      },
+      {
+        "path": "harfbuzz-e8ed626526508f8c24c095f82198b52056ed28c4/test/shape/data/text-rendering-tests/COPYING",
+        "sha256": "d24039e4d22c9bc72096f6174374539d92a3d6e1163938546ec59179fe095e6f",
+        "size": 584
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LicenseRef-HarfBuzz-MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "highway",
+    "source_revision": "c752a4429cf2347797df29bf064cc74302637011",
+    "source_sha256": "f6ae1f94fbaade26d4c1c825525d4ab97751daf90ed00997f17129350ee087d3",
+    "license_documents": [
+      {
+        "path": "highway-c752a4429cf2347797df29bf064cc74302637011/LICENSE",
+        "sha256": "85de9303e7a81f35d81befd51a4004c41b5e7f7e40cd4e3f5ff609ecd71a0e44",
+        "size": 13435
+      },
+      {
+        "path": "highway-c752a4429cf2347797df29bf064cc74302637011/debian/copyright",
+        "sha256": "6e4ecf1cae052b678ea3178dd4b3652d581ee66a82d58db8800dd7d80dd6de76",
+        "size": 825
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "lame",
+    "source_revision": "9a5b35c430a2e6d150d65a96c7d7acdd64962a8f",
+    "source_sha256": "4f084586451024448b2243e0d360e722540377a96e531eb04ad4c07735bb2dce",
+    "license_documents": [
+      {
+        "path": "lame-9a5b35c430a2e6d150d65a96c7d7acdd64962a8f/COPYING",
+        "sha256": "bfe4a52dc4645385f356a8e83cc54216a293e3b6f1cb4f79f5fc0277abf937fd",
+        "size": 25284
+      },
+      {
+        "path": "lame-9a5b35c430a2e6d150d65a96c7d7acdd64962a8f/LICENSE",
+        "sha256": "7a40cbd8818c57e5285e83c772a459a996d1662c824a879836b97b473c07cae4",
+        "size": 487
+      },
+      {
+        "path": "lame-9a5b35c430a2e6d150d65a96c7d7acdd64962a8f/debian/copyright",
+        "sha256": "f0e4c5098ffedad31473eec38810c26409223858fb8d63dd7685bf225f96bc5d",
+        "size": 7026
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 6,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "lcms2",
+    "source_revision": "15c24e7ded91184c38c46c096804fa7272765737",
+    "source_sha256": "6641166bdeb9bf69faed539abbcd10d1654dec4241a060eb81c8eafa26bd6aa7",
+    "license_documents": [
+      {
+        "path": "Little-CMS-15c24e7ded91184c38c46c096804fa7272765737/LICENSE",
+        "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31",
+        "size": 1080
+      },
+      {
+        "path": "Little-CMS-15c24e7ded91184c38c46c096804fa7272765737/plugins/fast_float/COPYING.GPL3",
+        "sha256": "c53a65c2fd561c87eaabf1072ef5dcab8653042bc15308465f52413585eb6271",
+        "size": 35146
+      },
+      {
+        "path": "Little-CMS-15c24e7ded91184c38c46c096804fa7272765737/plugins/threaded/COPYING.GPL3",
+        "sha256": "c53a65c2fd561c87eaabf1072ef5dcab8653042bc15308465f52413585eb6271",
+        "size": 35146
+      },
+      {
+        "path": "Little-CMS-15c24e7ded91184c38c46c096804fa7272765737/utils/jpgicc/LICENSE_iccjpeg",
+        "sha256": "8baac37d14eed89b82ffcb041677dd701164eb5cc0f26e165fe47eb11afa0dca",
+        "size": 3234
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libarchive",
+    "source_revision": "7197234b80b9983bbcaea86776555ecca66d968b",
+    "source_sha256": "75f84cf178239221a6bda279184a7a5073b35d035bab99657a7e78f5872907c7",
+    "license_documents": [
+      {
+        "path": "libarchive-7197234b80b9983bbcaea86776555ecca66d968b/COPYING",
+        "sha256": "30e556b3959e3985d66efefec5eaac51d4995053caa1d3cffe6eb916f146f229",
+        "size": 3089
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-2-Clause AND BSD-3-Clause AND CC0-1.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE",
+    "selection_boundary": "libarchive C library only; archive_blake2 files selected under CC0; CPIO/CAT/TAR/tests disabled; GPL build scripts are build tools, not linked library code"
+  },
+  {
+    "component": "libaribcaption",
+    "source_revision": "e27f90ccbd528a5d8e9153365043135f4d3fc976",
+    "source_sha256": "d23a4dd79338967b72ec605b41f181ea231c044fb58bc6124dbb0f8be781812c",
+    "license_documents": [
+      {
+        "path": "libaribcaption-e27f90ccbd528a5d8e9153365043135f4d3fc976/LICENSE",
+        "sha256": "5149f1ce4fe89190d86bfb440456701a3a7406fc2b19ef0d8b57661f62b32c04",
+        "size": 1065
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libass",
+    "source_revision": "f61db567e6593df3470e91594bcd4ad2d0473aff",
+    "source_sha256": "edb3e866ca9394152484bc9a83b68a395f5c9052ae0dc502e4100035c250330b",
+    "license_documents": [
+      {
+        "path": "libass-f61db567e6593df3470e91594bcd4ad2d0473aff/COPYING",
+        "sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c",
+        "size": 755
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "ISC",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libbluray",
+    "source_revision": "a24f4fad4d62893de647abc8671397747b2359dd",
+    "source_sha256": "f596c2ede4131fa4471bb292c28c327ea2115b1a3ea010d6ddfb75f0935600b7",
+    "license_documents": [
+      {
+        "path": "libbluray-a24f4fad4d62893de647abc8671397747b2359dd/COPYING",
+        "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d",
+        "size": 24478
+      },
+      {
+        "path": "libbluray-a24f4fad4d62893de647abc8671397747b2359dd/contrib/asm/LICENSE.txt",
+        "sha256": "293b6af371eee28b0ff16f0334ea19e20a3d5522143faa4b95b346855507879a",
+        "size": 1598
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libbs2b",
+    "source_revision": "5ca2d59888df047f1e4b028e3a2fd5be8b5a7277",
+    "source_sha256": "f1f7b9cc46bd8953b27e46c58578b1f68df8b99b2d499dcc4072e15e0f94b869",
+    "license_documents": [
+      {
+        "path": "libbs2b-5ca2d59888df047f1e4b028e3a2fd5be8b5a7277/COPYING",
+        "sha256": "dfd5a8d7dc501447bf0d58b0fc9ef85ab9e713963d7dcf459897adefa4c710ca",
+        "size": 1059
+      },
+      {
+        "path": "libbs2b-5ca2d59888df047f1e4b028e3a2fd5be8b5a7277/win32/sndfile/libsndfile-license.txt",
+        "sha256": "319daefe38ebeead3df178e5937898a52d67c0c795f54f1c0bb10ac3b9cffb63",
+        "size": 26940
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libiconv",
+    "source_revision": null,
+    "source_sha256": "3b08f5f4f9b4eb82f151a7040bfd6fe6c6fb922efe4b1659c66ea933276965e8",
+    "license_documents": [
+      {
+        "path": "libiconv-1.18/COPYING.LIB",
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "size": 26419
+      },
+      {
+        "path": "libiconv-1.18/libcharset/COPYING.LIB",
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "size": 26419
+      },
+      {
+        "path": "libiconv-1.18/COPYING",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "size": 35147
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libjpeg",
+    "source_revision": "43ea809765004508d8da72ebe562cf570c6a62b2",
+    "source_sha256": "d59999e0badf04f71abd78dd12b865a5e12ac0b7049fc7cc588c94668a49d0dd",
+    "license_documents": [
+      {
+        "path": "libjpeg-turbo-43ea809765004508d8da72ebe562cf570c6a62b2/LICENSE.md",
+        "sha256": "ba6bceebcba0fdd35488477c2cca8c4632ce82c74dbfbc87d886ce6fc4433579",
+        "size": 6077
+      },
+      {
+        "path": "libjpeg-turbo-43ea809765004508d8da72ebe562cf570c6a62b2/release/License.rtf",
+        "sha256": "d26120ab237f87dea10aa4fa7fd4243cadffd26e54eb2f3903d5fb0f8ed336b2",
+        "size": 2178
+      },
+      {
+        "path": "libjpeg-turbo-43ea809765004508d8da72ebe562cf570c6a62b2/src/spng/LICENSE",
+        "sha256": "0622b0794d0fecde47d743f1bb70a03e6fdf082be8e71f39de672ed995d96ff9",
+        "size": 1341
+      },
+      {
+        "path": "libjpeg-turbo-43ea809765004508d8da72ebe562cf570c6a62b2/src/spng/libpng-LICENSE.txt",
+        "sha256": "4f52a606ef0eb8a1bedee6088364f483df777611c0d554b090bf9b0f7cd3e798",
+        "size": 1641
+      },
+      {
+        "path": "libjpeg-turbo-43ea809765004508d8da72ebe562cf570c6a62b2/src/spng/zlib/LICENSE",
+        "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+        "size": 1002
+      },
+      {
+        "path": "libjpeg-turbo-43ea809765004508d8da72ebe562cf570c6a62b2/testimages/LICENSE.txt",
+        "sha256": "1c4d5dfc985d5061ba11180a8ffb541cc1778bccf87fd9f0fb92cbae69d8a9cc",
+        "size": 2075
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LicenseRef-IJG-BSD",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libjxl",
+    "source_revision": "ef67fde2ec16d52e644c5a0969230b9a85e3eb31",
+    "source_sha256": "f43ebb7557b459b12859088d7d53197a3c091d3f21c0e744bfdc9e773d7b048a",
+    "license_documents": [
+      {
+        "path": "libjxl-ef67fde2ec16d52e644c5a0969230b9a85e3eb31/LICENSE",
+        "sha256": "8405932022a556380c2d8c272eff154a923feb197233f348ce5f7334fb0a5ede",
+        "size": 1508
+      },
+      {
+        "path": "libjxl-ef67fde2ec16d52e644c5a0969230b9a85e3eb31/debian/copyright",
+        "sha256": "ec6f5bc1043fba8ffa648157b5beee8915865a54f25c5f3201b0e910cd09ebde",
+        "size": 10405
+      },
+      {
+        "path": "libjxl-ef67fde2ec16d52e644c5a0969230b9a85e3eb31/lib/extras/LICENSE.apngdis",
+        "sha256": "4319c422c3bf10168877a83cd9ff848684b9e53dce9a68de0a3f454a825933f6",
+        "size": 1017
+      },
+      {
+        "path": "libjxl-ef67fde2ec16d52e644c5a0969230b9a85e3eb31/third_party/HEVCSoftware/cfg/LICENSE",
+        "sha256": "44a2c5f2ce34d00a30554a44d3e51377852f84bc183dc1b9fb2b48ece976ebef",
+        "size": 1744
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libmodplug",
+    "source_revision": "d1b97ed0020bc620a059d3675d1854b40bd2608d",
+    "source_sha256": "d145910ca10c3ecab0019d45be7e31ea6be1d1ee951ef0e1f747c9752d20f043",
+    "license_documents": [
+      {
+        "path": "libmodplug-d1b97ed0020bc620a059d3675d1854b40bd2608d/COPYING",
+        "sha256": "49942e7b3b175f549e751feb08b5270ca6f6c5fb7a1be9f9517db275ec32c92e",
+        "size": 57
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LicenseRef-Public-Domain",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libmysofa",
+    "source_revision": "648eed03472e6720a1ea45d1a1f86c4efb569ff9",
+    "source_sha256": "7e0e7462732363b50cf35f93bca701abba7da7ae4e91366cdd924ca56db9f8e3",
+    "license_documents": [
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/LICENSE",
+        "sha256": "9c8713ccc5d6d93d20c7a1cfcb876e64baf551bfbe67faa4e60d39cda9ffd023",
+        "size": 1453
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.CIPIC_subject_003_hrir_final",
+        "sha256": "78149b9a8138d9fdcbd77b66e554711a1a2a5451d16b432b5eaec6d642697d85",
+        "size": 2259
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.D1_48K_24bit_0.3s_FIR_SOFA",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.FHK_HRIR_L2354",
+        "sha256": "47c326d67143bb68c008a900c954c8a6779bdafa25d350d12c57d532c3a32200",
+        "size": 19587
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.H20_44K_16bit_256tap_FIR_SOFA",
+        "sha256": "44ba2315604e3fbe0f11c0d9cbb6114159ba74c3f31b5a72b2493476b3f9b44a",
+        "size": 1113
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.LISTEN_1002_IRC_1002_C_HRIR",
+        "sha256": "29661b4a131466c1d5cdb786db0e531244c14850af0d3fb80fb8c801bdbe7145",
+        "size": 619
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.MIT_KEMAR_pinnae",
+        "sha256": "548b43283652608c38ed82accb918fae135885016de78c969cbd8cd7215d15ec",
+        "size": 1414
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.TU-Berlin_QU_KEMAR_anechoic",
+        "sha256": "84be1cf7d2cf8ea106fcf1f24e360cd922a05f80c6172e3f70608b0eaed50460",
+        "size": 19431
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/tests/LICENSE.pulse",
+        "sha256": "fabb8e1099a0812e0be1951a94cdda0def9b3e60f1aa5b649a0dbe01fc637fc0",
+        "size": 12851
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/windows/third-party/sys/LICENSE",
+        "sha256": "818fd40b46dfbe838f4dc0957bfe44afc4b35d450237723b82d793a0403f3c77",
+        "size": 7991
+      },
+      {
+        "path": "libmysofa-648eed03472e6720a1ea45d1a1f86c4efb569ff9/windows/third-party/zlib-1.3.1/LICENSE",
+        "sha256": "05b547d6a157efb1659997b605b63cd36f2e3f30d167b5a6826ecdde052d154f",
+        "size": 66
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libopenmpt",
+    "source_revision": null,
+    "source_sha256": "79ab3ce3672601e525b5cc944f026c80c03032f37d39caa84c8ca3fdd75e0c98",
+    "license_documents": [
+      {
+        "path": "libopenmpt-0.7.12+release.autotools/src/mpt/LICENSE.BSL-1.0.txt",
+        "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+        "size": 1338
+      },
+      {
+        "path": "libopenmpt-0.7.12+release.autotools/src/mpt/LICENSE.BSD-3-Clause.txt",
+        "sha256": "e6374c0159c4bdf56516c956a5c4bee3a2f1dae1bfa241e2e0b7271c0e36c180",
+        "size": 1596
+      },
+      {
+        "path": "libopenmpt-0.7.12+release.autotools/LICENSE",
+        "sha256": "e3d7e76c6b441ddd9fff0a397e7b5e055a11678bd7c3b246a0ce13e352eb15e8",
+        "size": 1621
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libplacebo",
+    "source_revision": "1dd022687b9ac1dd996855b51433bf770ae76aab",
+    "source_sha256": "6dab0ebd55b4c52c87acb14fc7d7fb2da5fc1c6cb8340932ea258a4d12699e06",
+    "license_documents": [
+      {
+        "path": "libplacebo-1dd022687b9ac1dd996855b51433bf770ae76aab/LICENSE",
+        "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d",
+        "size": 24478
+      },
+      {
+        "path": "libplacebo-1dd022687b9ac1dd996855b51433bf770ae76aab/demos/LICENSE",
+        "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+        "size": 7048
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libpng",
+    "source_revision": "d76d5106f041b97b3462d15bce738f2a4412de47",
+    "source_sha256": "2c6b959f386694e7d345d9ff158b18b5defd584fcd4a62008ba18a74322141fc",
+    "license_documents": [
+      {
+        "path": "libpng-d76d5106f041b97b3462d15bce738f2a4412de47/LICENSE",
+        "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+        "size": 5345
+      },
+      {
+        "path": "libpng-d76d5106f041b97b3462d15bce738f2a4412de47/contrib/gregbook/COPYING",
+        "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572",
+        "size": 18097
+      },
+      {
+        "path": "libpng-d76d5106f041b97b3462d15bce738f2a4412de47/contrib/gregbook/LICENSE",
+        "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438",
+        "size": 2373
+      },
+      {
+        "path": "libpng-d76d5106f041b97b3462d15bce738f2a4412de47/contrib/pngexif/LICENSE_MIT.txt",
+        "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+        "size": 1036
+      },
+      {
+        "path": "libpng-d76d5106f041b97b3462d15bce738f2a4412de47/contrib/pngminus/LICENSE.txt",
+        "sha256": "1806f1f10d393e9e377b3a8d1b968452b54f1a90378f14eeef45426946ace330",
+        "size": 1164
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Libpng-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libpsl",
+    "source_revision": "aa3a80e18f25caf3916636c8668dcc0fff7c016d",
+    "source_sha256": "e06fde66487f69bb84831118f9c36adb3d040908ac0ceff3fdc609eb62a1ffb2",
+    "license_documents": [
+      {
+        "path": "libpsl-aa3a80e18f25caf3916636c8668dcc0fff7c016d/LICENSE",
+        "sha256": "e7c9f0d8498d28a360a7e8293ea70fd7bd952955b636938322c13d60a03b5a45",
+        "size": 1126
+      },
+      {
+        "path": "libpsl-aa3a80e18f25caf3916636c8668dcc0fff7c016d/src/LICENSE.chromium",
+        "sha256": "1d7f52747a9169751cdf2641a8299c0098e9ecdf9429296ffd55bdb14c9ed5b3",
+        "size": 1664
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libsdl2",
+    "source_revision": "74be4c2836da0940f0144d0d97852606f9ab11e9",
+    "source_sha256": "c8834aa6456bc9195bcd4ebd63c963b278d65c3d8a40b6dca6e1f2e6f4e35592",
+    "license_documents": [
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/LICENSE.txt",
+        "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd",
+        "size": 884
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/Xcode-iOS/Demos/data/bitmapfont/license.txt",
+        "sha256": "5059bc9c2f37b7e7a557685ae9330ecfd798537bdfde94de63a9c721c92a8856",
+        "size": 13091
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/Xcode/SDL/pkg-support/resources/License.txt",
+        "sha256": "30e349158ffdcb06b9bb2ec406df66758161ad1efa75a368243a6d0b50b43784",
+        "size": 909
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/build-scripts/update-copyright.sh",
+        "sha256": "040e239c386bab95ebf206b2033768d5c37d8118c8330690fde8b94f5c391cc9",
+        "size": 346
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/include/SDL_copying.h",
+        "sha256": "9ffcfd798ec40121bd85b12780a83b4638b7bd4e382d554aa243e870d352bdf5",
+        "size": 939
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/src/hidapi/LICENSE-bsd.txt",
+        "sha256": "30eb1bef29b46f8ba7ab8b416035dbd93cb034a45481dd97815b944284582cd2",
+        "size": 1534
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/src/hidapi/LICENSE-gpl3.txt",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "size": 35147
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/src/hidapi/LICENSE-orig.txt",
+        "sha256": "fb5436aa63d1b71a8dfbf74ecaf1a5b4e1ec4df7f80074d11fec99284f69ca5f",
+        "size": 264
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/src/hidapi/LICENSE.txt",
+        "sha256": "7d3b087c34f35d4d538e3bcddd1ff8f66e92f9ef336881999482800ddf840913",
+        "size": 530
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/src/video/yuv2rgb/LICENSE",
+        "sha256": "f7d74004cc75778cae46c5f0139f244d67c07ef64cf51937e8272352197dcb18",
+        "size": 1480
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/test/COPYING",
+        "sha256": "d5a549e4a7b88cb696d0db15b21830061131ed361257ab399a33ca08ce0b33d5",
+        "size": 210
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/test/unifont-13.0.06-license.txt",
+        "sha256": "b7e8b9d8656d5216a61f48c7e62704b8aec50e8af8ca410b28fb04ea32e0f220",
+        "size": 4250
+      },
+      {
+        "path": "SDL-74be4c2836da0940f0144d0d97852606f9ab11e9/visualtest/COPYING.txt",
+        "sha256": "dae65ccf728227eff8e10194437078a5628047b9f55d796039688e7ca8e3aa4e",
+        "size": 947
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Zlib",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libsixel",
+    "source_revision": "af12e5bc6f3f69ad83479da85ddb371420da9b17",
+    "source_sha256": "5b590e1189304a233fd683f6deb0124d643658e9a2a52ad4aba00404c01eaded",
+    "license_documents": [
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE",
+        "sha256": "f719f01f57fec5dea2103ce3b2443b0d457bac44dcb8989f08885116bae12d18",
+        "size": 1061
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.images",
+        "sha256": "efdf634b089e9b4200cc31d0f491d179fedc9e9795a34f0414ac1088139ecb8d",
+        "size": 546
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.mesa",
+        "sha256": "e420be0c89e55462371040e2150c662041fde96f8689ff78f1b2a8a90786db5a",
+        "size": 1593
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.pngsuite",
+        "sha256": "6bc27728bf5c78643ec2dfae80f8ed0716ceb1ab9e51a1140131063ceaf6a4e7",
+        "size": 166
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.pnmcolormap",
+        "sha256": "6a384889a29be1f449155e38aae113b2e049d56992dea8f31bea644a526d17e9",
+        "size": 533
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.sdump",
+        "sha256": "1d6ad1693709ae74c5331eb7eca310bd98be62a26a5f8a9b9b17c7b48da89f55",
+        "size": 1103
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.sixel",
+        "sha256": "0ca026a0d26e71c6c3c2fae5593eff1d259f3111e88a208644955dec33127432",
+        "size": 1415
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/LICENSE.stb",
+        "sha256": "5a3dd8ec218a701fbd51fc4ac9cccab54a126babc315c9b60526a52c0effdcd0",
+        "size": 560
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/php/LICENSE",
+        "sha256": "9869d5d6148813452fc94f54a56eb5ac1421b0c6ad27864b6c953a92eac4b5d4",
+        "size": 1056
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/python/LICENSE",
+        "sha256": "ea88a22df4c1663bc815f79afc974ec79ddb25263d15538ceec7a2bee5764b35",
+        "size": 1061
+      },
+      {
+        "path": "libsixel-af12e5bc6f3f69ad83479da85ddb371420da9b17/ruby/LICENSE.txt",
+        "sha256": "5a6ab6267fd69c08f7355f6022d134f8ce49d2145d466b77f5a371239884b2a7",
+        "size": 1074
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libsoxr",
+    "source_revision": "945b592b70470e29f917f4de89b4281fbbd540c0",
+    "source_sha256": "ae970b44833c7dd2b088d5928b27c7f1796198ff5bc5386b90393aaf33e53d51",
+    "license_documents": [
+      {
+        "path": "soxr-945b592b70470e29f917f4de89b4281fbbd540c0/COPYING.LGPL",
+        "sha256": "f2f118b9029ec1871b953639ecc46651b2fc7b62e295e6cf3ef2ac4c9a058b33",
+        "size": 26432
+      },
+      {
+        "path": "soxr-945b592b70470e29f917f4de89b4281fbbd540c0/lsr-tests/COPYING",
+        "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670",
+        "size": 17992
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libssh",
+    "source_revision": "7b3ba877209ae2355f12f4a7ab56022337caaaf5",
+    "source_sha256": "c7b3e020613a2a53994bfdd3df7605785c97bd0210ebe8ea960ec79805549124",
+    "license_documents": [
+      {
+        "path": "libssh-mirror-7b3ba877209ae2355f12f4a7ab56022337caaaf5/COPYING",
+        "sha256": "1656186e951db1c010a8485481fa94587f7e53a26d24976bef97945ad0c4df5a",
+        "size": 25008
+      },
+      {
+        "path": "libssh-mirror-7b3ba877209ae2355f12f4a7ab56022337caaaf5/cmake/Modules/COPYING-CMAKE-SCRIPTS",
+        "sha256": "46cde7dc11e64c78d650b4851b88f6704b4665ff60f22a1caf68ceb15e217e5b",
+        "size": 1327
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libudfread",
+    "source_revision": "b0bc6957e7e07d5f35391f210596d9eb71cffdd9",
+    "source_sha256": "c04bb96b72dd0760030d880ad6c9ea2ae80abbdd648de127adb1b2e8555186aa",
+    "license_documents": [
+      {
+        "path": "libudfread-b0bc6957e7e07d5f35391f210596d9eb71cffdd9/COPYING",
+        "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "size": 26530
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libunibreak",
+    "source_revision": "f8172fe771ef620112247cadfb876aecaa4f769e",
+    "source_sha256": "6b4fbe4836f6b1be34a5ba86961b13347169cbefaedaf08fc0b2ddfb718c0193",
+    "license_documents": [
+      {
+        "path": "libunibreak-f8172fe771ef620112247cadfb876aecaa4f769e/src/eastasianwidthdef.c",
+        "sha256": "f609d5915e4cf7572765e66aaa8bda6d315cc8ec89e01085c92683a2b1edd42d",
+        "size": 1555,
+        "kind": "Copyright and license embedded in source header"
+      },
+      {
+        "path": "libunibreak-f8172fe771ef620112247cadfb876aecaa4f769e/LICENCE",
+        "sha256": "0c57e2ec42ece17791a75d2f9b2f8e0663181be008667a507f765b3ef22522db",
+        "size": 1045
+      },
+      {
+        "path": "libunibreak-f8172fe771ef620112247cadfb876aecaa4f769e/README.md",
+        "sha256": "cc38c7b86a88afb77dd3710628b2622c01bfb90d78709e868f0da95c70c02cf5",
+        "size": 2996
+      },
+      {
+        "path": "libunibreak-f8172fe771ef620112247cadfb876aecaa4f769e/src/unibreakbase.h",
+        "sha256": "3880a7c664fe6eec033950935ec99c297d9c44fe154fbd6972b4d8a55fd20976",
+        "size": 1784
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Zlib AND Unicode-3.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE",
+    "selection_boundary": "Source headers Zlib; Unicode 17 generated data attribution and Unicode V3 notice must accompany Source"
+  },
+  {
+    "component": "libva",
+    "source_revision": "f3fefceb192ca28abf588aadf2392350aebf46ce",
+    "source_sha256": "128e9885b4584fbe044c8af9a259047e09c93101a42b1af61deb702dbc016110",
+    "license_documents": [
+      {
+        "path": "libva-f3fefceb192ca28abf588aadf2392350aebf46ce/COPYING",
+        "sha256": "c86a782ee845b52472dae9b9d79fb915d333628ac0efe49cdce63644814931de",
+        "size": 1130
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libvpl",
+    "source_revision": "674d015bcb294bc39fa276e99a652ea045423e82",
+    "source_sha256": "9d5d3c221b9d41468e04add6855cf5eec6df06dae7be649f84e1f846c98e38fb",
+    "license_documents": [
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/LICENSE",
+        "sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677",
+        "size": 1074
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api1x_core/legacy-decode/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api1x_core/legacy-encode/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api1x_core/legacy-vpp/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-decode/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-decvpp/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-encode-jpeg/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-encode/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-sharing-dx11/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-sharing-ocl/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-sharing-vaapi/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-transcode/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/api2x/hello-vpp/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/interop/vpl-infer/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/examples/tutorials/01_transition/License.txt",
+        "sha256": "2e35006c345787f7205bdaa86920c8fac86abd19b95d7b4c1ba5531853ea3938",
+        "size": 1052
+      },
+      {
+        "path": "libvpl-674d015bcb294bc39fa276e99a652ea045423e82/libvpl/test/ext/googletest/LICENSE",
+        "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "size": 1475
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libvpx",
+    "source_revision": "ed2a5b572f0f62a72d2e483dd3031841f08fb343",
+    "source_sha256": "787af8a23be968414b88feb53fc7d2d16742c0e0f40665c54a69c4efdd4f77ea",
+    "license_documents": [
+      {
+        "path": "LICENSE",
+        "sha256": "8267348d5af1262c11d1a08de2f5afc77457755f1ac658627dd9acf71011d615",
+        "size": 1537
+      },
+      {
+        "path": "third_party/googletest/src/LICENSE",
+        "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+        "size": 1475
+      },
+      {
+        "path": "third_party/libwebm/LICENSE.TXT",
+        "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+        "size": 1496
+      },
+      {
+        "path": "third_party/libyuv/LICENSE",
+        "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+        "size": 1506
+      },
+      {
+        "path": "third_party/nalloc/LICENSE",
+        "sha256": "d7dd0396ec46975e1bf9093680068ef301bc0ed204603e623a6f7073ab922ab1",
+        "size": 1069
+      },
+      {
+        "path": "third_party/x86inc/LICENSE",
+        "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8",
+        "size": 936
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libwebp",
+    "source_revision": "1c85c37f93315054e6138cc94d1f58b60749833d",
+    "source_sha256": "77955ab6e0d6f879e3675d952fa96d4e170b08b055282ea5357601f6084b6af1",
+    "license_documents": [
+      {
+        "path": "COPYING",
+        "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+        "size": 1496
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libxml2",
+    "source_revision": "c43dc98d27ac315a48d93dbd399c6c22cf7125b1",
+    "source_sha256": "7ba201d5039d4b4566498ea41f27d2fb3653befbfe417e7e9a3f657b25b1be3d",
+    "license_documents": [
+      {
+        "path": "libxml2-c43dc98d27ac315a48d93dbd399c6c22cf7125b1/Copyright",
+        "sha256": "5d4873884a890122a4b9b20ad56ac6f7da1d796a5bfcf04a427970ac96217626",
+        "size": 1314
+      },
+      {
+        "path": "libxml2-c43dc98d27ac315a48d93dbd399c6c22cf7125b1/result/html-tokenizer/NOTICE",
+        "sha256": "d6a2cb265a0a249a234b89eeffa7f316ebe5bff546672a0a2b1a861dd2238460",
+        "size": 1270
+      },
+      {
+        "path": "libxml2-c43dc98d27ac315a48d93dbd399c6c22cf7125b1/test/html-tokenizer/NOTICE",
+        "sha256": "d6a2cb265a0a249a234b89eeffa7f316ebe5bff546672a0a2b1a861dd2238460",
+        "size": 1270
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "libzimg",
+    "source_revision": "67e0603271c080e22c8429856dd4a8a56587e61e",
+    "source_sha256": "539495d51fcd8c7ef9b89a611454e0c1173d18e8d4e743efdef67c4aa7e40d4f",
+    "license_documents": [
+      {
+        "path": "zimg-67e0603271c080e22c8429856dd4a8a56587e61e/COPYING",
+        "sha256": "7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40",
+        "size": 484
+      },
+      {
+        "path": "zimg-67e0603271c080e22c8429856dd4a8a56587e61e/test/extra/musl-libm/COPYRIGHT",
+        "sha256": "15d9afbf84041872b4d840ed7d165d3eee786ff3f97e703b10467c259ff4e7d9",
+        "size": 6166
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "WTFPL",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "luajit",
+    "source_revision": "f75bf45e8b869a8ee4562ab0183322c3ebf2d9f3",
+    "source_sha256": "aaf259c5ab77beda2133f58ebe67074df909437ecb35496d22a5270ae0c24ab6",
+    "license_documents": [
+      {
+        "path": "luajit2-f75bf45e8b869a8ee4562ab0183322c3ebf2d9f3/COPYRIGHT",
+        "sha256": "15477efb3696e3c49979294a2a79f9ef11e83a2414124629f996805a8967a14d",
+        "size": 3056
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "mpv",
+    "source_revision": "88eb9f2e73945d8bc9c133a2f67babaa9af34680",
+    "source_sha256": "417087077b09b1738c84e5ee543be694def1dc52df73e805bf1bfd11d95f5890",
+    "license_documents": [
+      {
+        "path": "mpv-88eb9f2e73945d8bc9c133a2f67babaa9af34680/Copyright",
+        "sha256": "bfe9ee4cceabcb8ecbfadf208d04156f73d801e6a57369a5606bb8341e204a23",
+        "size": 4096
+      },
+      {
+        "path": "mpv-88eb9f2e73945d8bc9c133a2f67babaa9af34680/LICENSE.GPL",
+        "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+        "size": 17984
+      },
+      {
+        "path": "mpv-88eb9f2e73945d8bc9c133a2f67babaa9af34680/LICENSE.LGPL",
+        "sha256": "72b672113d642cbb8ef5dcc76938db801983c56e50b1400ab930f1a64d6dc8d9",
+        "size": 26410
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "mujs",
+    "source_revision": "aab59f2c8136b55e8eef7a016d5a15fe8cf69f3f",
+    "source_sha256": "ca0e083a45dea43070dd1b085841b6785d501ea14a2f80f686e13c792d2fe0ee",
+    "license_documents": [
+      {
+        "path": "mujs/COPYING",
+        "sha256": "0ca9b4fbfbcab8ac7d32475890d866efc02f4cffb6b6da5c0e9a0615cc3d82fe",
+        "size": 759
+      },
+      {
+        "path": "mujs/docs/license.html",
+        "sha256": "533d750392fdfa8a856732a479f9b267310b4fd31732b21695fa3663444dd344",
+        "size": 1400
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "ISC",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "nghttp2",
+    "source_revision": "23f8efbdd3ad17c2e33982484a06b2edcba053fd",
+    "source_sha256": "045475e3232f15ce86362c230fc6e6adcf1d32201d46af4394bb1279682f6077",
+    "license_documents": [
+      {
+        "path": "nghttp2-23f8efbdd3ad17c2e33982484a06b2edcba053fd/COPYING",
+        "sha256": "6b94f3abc1aabd0c72a7c7d92a77f79dda7c8a0cb3df839a97890b4116a2de2a",
+        "size": 1156
+      },
+      {
+        "path": "nghttp2-23f8efbdd3ad17c2e33982484a06b2edcba053fd/LICENSE",
+        "sha256": "f0518afc0a555337bac2f0fb37d33cdee6111983da69aaa504a1876beeddfde0",
+        "size": 12
+      },
+      {
+        "path": "nghttp2-23f8efbdd3ad17c2e33982484a06b2edcba053fd/doc/_exts/rubydomain/LICENSE.rubydomain",
+        "sha256": "2dee6027d254030e382dd8e9f0f1b4ac2c186bd409c85ca2bef80d38b4da283c",
+        "size": 1418
+      },
+      {
+        "path": "nghttp2-23f8efbdd3ad17c2e33982484a06b2edcba053fd/third-party/llhttp/LICENSE",
+        "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d",
+        "size": 1069
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "nghttp3",
+    "source_revision": "d29ceea176cebc1f41c9d818c3b1825143d3f813",
+    "source_sha256": "7e85f8036e3145152c2c9a4cf30d51eacd832788059d243e99914ba4bf227a2f",
+    "license_documents": [
+      {
+        "path": "nghttp3-d29ceea176cebc1f41c9d818c3b1825143d3f813/COPYING",
+        "sha256": "58cc3fc8c6d6cb2485ab35eb5918e849b5bf1e56522974e106d7a39a88d61dcd",
+        "size": 1081
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "ngtcp2",
+    "source_revision": "48228939787d4b5bea94c7795b8c7fe0781d918e",
+    "source_sha256": "89a42737d244e3bc70e8f17ec9a03875da57f99a3067c630b4a6877aa16291a4",
+    "license_documents": [
+      {
+        "path": "ngtcp2-48228939787d4b5bea94c7795b8c7fe0781d918e/COPYING",
+        "sha256": "542dd526d2ea23565f0571cc68df6f05ed11248a90ff0f32de19d8ba589db513",
+        "size": 1080
+      },
+      {
+        "path": "ngtcp2-48228939787d4b5bea94c7795b8c7fe0781d918e/third-party/http-parser/LICENSE-MIT",
+        "sha256": "2996a1c43ee757f9c997a829d82bdd584052323e73cf02ff8126c6fbd95c2d87",
+        "size": 1251
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "nvcodec-headers",
+    "source_revision": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "source_sha256": "ea251ed884765b7523e0f4fa814dfd9acd7b5dcc43878cad744b77a46b429e48",
+    "license_documents": [
+      {
+        "path": "nv-codec-headers-eddcea9e27f6b772057c9b3f87de2cc1737faffc/include/ffnvcodec/dynlink_cuda.h",
+        "sha256": "c970d5817120ea481ba29b9c603bdc9a386985d9fc98a47f6588030dcdba87c1",
+        "size": 24212,
+        "kind": "Copyright and license embedded in source header"
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "ogg",
+    "source_revision": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822",
+    "source_sha256": "b2ff5c003e5697507169f7d614d64dc4e8bf030c85ad081bec75c164566f8246",
+    "license_documents": [
+      {
+        "path": "ogg-be05b13e98b048f0b5a0f5fa8ce514d56db5f822/COPYING",
+        "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814",
+        "size": 1466
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "openal-soft",
+    "source_revision": "9ca7d05e4f1b16897104c913be7553891f0d027d",
+    "source_sha256": "b386e7dbacb6ca8766dd97dcd7c9e7813c5ba136a3754e5fec3a33f1f3c9e539",
+    "license_documents": [
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/COPYING",
+        "sha256": "d808ce217e5b611854da622b57ec29fe545584c48bc5352fae72a4b6e5074a15",
+        "size": 23330
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/LICENSE-pffft",
+        "sha256": "64056328b3e7bc104e24ef96accc1a7abead156f0c02d1b87c97e3f3a28030de",
+        "size": 1669
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/LICENSE.Apache-2.0.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/LICENSE.BSD-3-Clause.txt",
+        "sha256": "b5a08cf98996dd83aa906a72c163600f6cb17a65ce546a553815a1267abd43ff",
+        "size": 1652
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/fmt-11.2.0/LICENSE",
+        "sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+        "size": 1431
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/fmt-11.2.0/doc/python-license.txt",
+        "sha256": "dcc4d9738d3e8d3b9f51286f1dc90d0c49ea8325982008ced021932a0b0b0cda",
+        "size": 14903
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/gsl/LICENSE",
+        "sha256": "4c21dc82a1c7186ea754fd59d504c00947953a3401fe8e24eaa44109ef8e2555",
+        "size": 1157
+      },
+      {
+        "path": "openal-soft-9ca7d05e4f1b16897104c913be7553891f0d027d/gsl/ThirdPartyNotices.txt",
+        "sha256": "691d94413053d5bda219c05f57739192b30c171db0925f3722604fe06f865d3b",
+        "size": 2022
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.0-or-later AND BSD-3-Clause AND MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE",
+    "selection_boundary": "Library under LGPL2-or-later selected LGPL3; PFFFT LICENSE-pffft, vendored fmt and GSL MIT notices retained; utils/examples/tests disabled"
+  },
+  {
+    "component": "openssl",
+    "source_revision": "d8bf6cdd4849925c30e4f1911c7acb49cb34b702",
+    "source_sha256": "8009a601f3dcfb1ac974b03cd43dd9862b8db088e5d971293c7ba49abeb9775a",
+    "license_documents": [
+      {
+        "path": "openssl-d8bf6cdd4849925c30e4f1911c7acb49cb34b702/LICENSE.txt",
+        "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+        "size": 10175
+      },
+      {
+        "path": "openssl-d8bf6cdd4849925c30e4f1911c7acb49cb34b702/crypto/x509/v3_usernotice.c",
+        "sha256": "d727ce3badff36a7313b40b8f583b9c9d624c106159e8e5748c0604ecbf3c4dd",
+        "size": 2862
+      },
+      {
+        "path": "openssl-d8bf6cdd4849925c30e4f1911c7acb49cb34b702/external/perl/Text-Template-1.56/LICENSE",
+        "sha256": "9837f05336ef3cbacb6a96e1672a0426d81ad01191f214b8d48e22ca62338181",
+        "size": 18412
+      },
+      {
+        "path": "openssl-d8bf6cdd4849925c30e4f1911c7acb49cb34b702/test/certs/ext-userNotice.pem",
+        "sha256": "affa69745b5e0ee3b4f289bd9da12d56c5a4a68c339a6e2932a3c9ba4743605c",
+        "size": 737
+      },
+      {
+        "path": "openssl-d8bf6cdd4849925c30e4f1911c7acb49cb34b702/util/perl/OpenSSL/copyright.pm",
+        "sha256": "04213b69dbebc8ba0dd8a6216af1d9422f9b63619c1cf2f1d8aa107b83bbb608",
+        "size": 1145
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "Apache-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "opus",
+    "source_revision": "503d81b138d76621aae4b12786e90de48aa8db3a",
+    "source_sha256": "e34101b726c033be40e3f5a2695d086362d59069554ffd46800c38a13eade1f7",
+    "license_documents": [
+      {
+        "path": "opus-503d81b138d76621aae4b12786e90de48aa8db3a/COPYING",
+        "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+        "size": 1945
+      },
+      {
+        "path": "opus-503d81b138d76621aae4b12786e90de48aa8db3a/LICENSE_PLEASE_READ.txt",
+        "sha256": "7efb4989e0cd1b256229bdf2f09300c5d14e35db0e7476bfb87fac243498273d",
+        "size": 703
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause AND LicenseRef-Opus-Patent",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "shaderc",
+    "source_revision": "ba3e587dbc13d423c713e964ac08e094731a034d",
+    "source_sha256": "54e28bdaeec49b27eb6dd413872a7cb0117cf6ca440619549917798829073879",
+    "license_documents": [
+      {
+        "path": "shaderc-ba3e587dbc13d423c713e964ac08e094731a034d/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "size": 11357
+      },
+      {
+        "path": "shaderc-ba3e587dbc13d423c713e964ac08e094731a034d/license-checker.cfg",
+        "sha256": "ff39f110e4b17c6a2e24eacc14a32674c2c1f2385828bdc23a0399d3475fffc8",
+        "size": 872
+      },
+      {
+        "path": "shaderc-ba3e587dbc13d423c713e964ac08e094731a034d/third_party/LICENSE.glslang",
+        "sha256": "b5a00e94f058edc87e05978329b55730d8689abe61205d9018443d03de4f07da",
+        "size": 8280
+      },
+      {
+        "path": "shaderc-ba3e587dbc13d423c713e964ac08e094731a034d/third_party/LICENSE.spirv-tools",
+        "sha256": "47e20ce182bc68fab1a0cfb129b03c326aaf4f2b6b7905aa9d376d31018bd29f",
+        "size": 11650
+      },
+      {
+        "path": "shaderc-ba3e587dbc13d423c713e964ac08e094731a034d/utils/add_copyright.py",
+        "sha256": "1e8e10e83cf8c1b9ab7dd9df9c77bbec01dc627b993486798a69b964fcc726aa",
+        "size": 5101
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Apache-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "speex",
+    "source_revision": "05895229896dc942d453446eba6f9f5ddcf95422",
+    "source_sha256": "adcf98e09a59a5f07baefb5007e4619b6da7692c1fd563db6d617198f6e9e021",
+    "license_documents": [
+      {
+        "path": "speex-05895229896dc942d453446eba6f9f5ddcf95422/COPYING",
+        "sha256": "2654a4264b2bfe298dedc508748d140111840c315cc8eb646a3a68c13fa75b01",
+        "size": 1773
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "spirv-cross",
+    "source_revision": "aa217aeb6c9f0ace7a0ab233b28807edf45eb165",
+    "source_sha256": "b99db6ee6182dbeb102257e755bf6d4978c23dcfd3329033304779279bc27212",
+    "license_documents": [
+      {
+        "path": "SPIRV-Cross-aa217aeb6c9f0ace7a0ab233b28807edf45eb165/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "SPIRV-Cross-aa217aeb6c9f0ace7a0ab233b28807edf45eb165/LICENSES/LicenseRef-KhronosFreeUse.txt",
+        "sha256": "fbeaca472f4f70e276dd1106ca5097435967a22ad6c1d8200aef7ad9f70aaf3f",
+        "size": 1305
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 1,
+    "selected_license": "Apache-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "spirv-headers",
+    "source_revision": "86f980c731e62ae4eaf383d320449d71687936bf",
+    "source_sha256": "d11ef011d0788ed002d7cc96224d298f43b126cabe887cd4d46199cb19ecf386",
+    "license_documents": [
+      {
+        "path": "SPIRV-Headers-86f980c731e62ae4eaf383d320449d71687936bf/LICENSE",
+        "sha256": "ea43b1de38a6f90c488800d66dec1ed671e68cda530266bc96951fb5b6307613",
+        "size": 23503
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MIT AND CC-BY-4.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE",
+    "selection_boundary": "Headers/XML MIT; JSONcpp generator MIT; accompanying documentation CC-BY-4.0 with attribution; no documentation code linked"
+  },
+  {
+    "component": "spirv-tools",
+    "source_revision": "2a7f2309a662a70dcd46a3e30ec013b300e7fab8",
+    "source_sha256": "767f66063fdbb52c5fb9edf2040ea3f2cbe1e441dfdec23b8d200fc975e5e22d",
+    "license_documents": [
+      {
+        "path": "SPIRV-Tools-2a7f2309a662a70dcd46a3e30ec013b300e7fab8/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "path": "SPIRV-Tools-2a7f2309a662a70dcd46a3e30ec013b300e7fab8/utils/check_copyright.py",
+        "sha256": "aff5ecc08e24dc0f62fcea990daddae97ef81016fd1699888f6b8b739089fd56",
+        "size": 9671
+      },
+      {
+        "path": "SPIRV-Tools-2a7f2309a662a70dcd46a3e30ec013b300e7fab8/utils/vscode/src/lsp/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Apache-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "subrandr",
+    "source_revision": "eaf47d947e754565fe60e88ffe9665a2a32b18d5",
+    "source_sha256": "96c2540ea1e9015c0b246ed83cdc35945b333b99eda422f6bfa8cee7f334aafa",
+    "license_documents": [
+      {
+        "path": "subrandr-eaf47d947e754565fe60e88ffe9665a2a32b18d5/LICENSE",
+        "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+        "size": 16726
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "MPL-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "svtav1",
+    "source_revision": "44e99b7876f30cf3f46ab99635b1f56cc30b683f",
+    "source_sha256": "7d0ef9c1bb541b2489daec747e820a1a39c3fad65c190c4b9178794b76e6374b",
+    "license_documents": [
+      {
+        "path": "SVT-AV1-44e99b7876f30cf3f46ab99635b1f56cc30b683f/LICENSE-BSD2.md",
+        "sha256": "c582fcbeb9cf972a60d298bfaf41dc5adff2dd14208946edcb9bb56a281e8438",
+        "size": 1316
+      },
+      {
+        "path": "SVT-AV1-44e99b7876f30cf3f46ab99635b1f56cc30b683f/LICENSE.md",
+        "sha256": "0acc2fcb27472bdc9aaf8b71f37055bbdac4f54671b7d922f241bd7fcd0dd3e6",
+        "size": 1709
+      },
+      {
+        "path": "SVT-AV1-44e99b7876f30cf3f46ab99635b1f56cc30b683f/third_party/fastfeat/LICENSE",
+        "sha256": "043dcfd059386f9facd376351b2bd79325778744aa442177390cdfcca54babed",
+        "size": 1506
+      },
+      {
+        "path": "SVT-AV1-44e99b7876f30cf3f46ab99635b1f56cc30b683f/third_party/safestringlib/LICENSE",
+        "sha256": "c0f99a208799ca20c9ccf31a30533d49334eb458dca5a3d14f9afe3e884e5d7d",
+        "size": 2247
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-2-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "uavs3d",
+    "source_revision": "0e20d2c291853f196c68922a264bcd8471d75b68",
+    "source_sha256": "1c1eb778b6080bc01493180ea7ae671c6444ce3aa760b5d021ba882eb0f9e3a0",
+    "license_documents": [
+      {
+        "path": "uavs3d-0e20d2c291853f196c68922a264bcd8471d75b68/COPYING",
+        "sha256": "5a8dcb7da222df8a81b6e334000f859248196335e2d28e1db9f3c552827d7cdf",
+        "size": 1690
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "uchardet",
+    "source_revision": "06029ec3340cdf6bf9a6a537dafb3f39eda0560e",
+    "source_sha256": "c1113a8b7fbaa31d840765c16b13b697140444d20b93a7e45a9a9484f47dac47",
+    "license_documents": [
+      {
+        "path": "uchardet-06029ec3340cdf6bf9a6a537dafb3f39eda0560e/COPYING",
+        "sha256": "107a29ccdd2d778aa2df5462f85dddfa099059abd22e064e07ec2cc9bafc37cd",
+        "size": 70517
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "vapoursynth",
+    "source_revision": "e46204429041e95a881b61eedddd46c08f9a307c",
+    "source_sha256": "8ee237704a6eb1c78d18aa011129916043b6fdf6784ea28efd344b555b623622",
+    "license_documents": [
+      {
+        "path": "vapoursynth-e46204429041e95a881b61eedddd46c08f9a307c/COPYING.LESSER",
+        "sha256": "b634ab5640e258563c536e658cad87080553df6f34f62269a21d554844e58bfe",
+        "size": 26526
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "LGPL-2.1-or-later",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "Only selected library/header paths; GPL utilities, player, nonfree/GPL-enabled features and unused assets are not approved",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "vorbis",
+    "source_revision": "c2aa86b05e981c96bf381fc6aa11cdd03eccc2fb",
+    "source_sha256": "95e908e8c3595ae017b07a376da83ed38a3edeeab9ad458451669f7076bee8b0",
+    "license_documents": [
+      {
+        "path": "vorbis-c2aa86b05e981c96bf381fc6aa11cdd03eccc2fb/COPYING",
+        "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a",
+        "size": 1470
+      },
+      {
+        "path": "vorbis-c2aa86b05e981c96bf381fc6aa11cdd03eccc2fb/debian/copyright",
+        "sha256": "1f6c6b6397d86d20968d7856d6945591b89e4cb64e5fc1ec8b992811f6a65ed8",
+        "size": 1695
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "vulkan",
+    "source_revision": "6b45d76280a9525740c38c1796060eadb9267488",
+    "source_sha256": "20e0168f089ef6ac9c5b12dc89e2170da3489c8dda750f68dc8ee8fad84ffdf3",
+    "license_documents": [
+      {
+        "path": "Vulkan-Loader-6b45d76280a9525740c38c1796060eadb9267488/LICENSE.txt",
+        "sha256": "43c0a37e6a0fa7ff3c843b3ec5a4fac84b712558ddac103fbd4c1649662a9ece",
+        "size": 11661
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Apache-2.0",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "vulkan-header",
+    "source_revision": "c46850864f4661461b0f6cb9922c058ffea4915e",
+    "source_sha256": "539ff8eaa4abf22fddbd98225c68a0c5ddb940075a4048c8b7f5d04449070a4e",
+    "license_documents": [
+      {
+        "path": "Vulkan-Headers-c46850864f4661461b0f6cb9922c058ffea4915e/LICENSE.md",
+        "sha256": "95ad366d23fadf701d355bc45fb8b82ae2d700239471d35d41286ac3b08ff903",
+        "size": 495
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Apache-2.0 OR MIT",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "xxhash",
+    "source_revision": "680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf",
+    "source_sha256": "ea7fac09a7a5e4fcbcc96ce72683c1ffb13c4c6cb92beec9de5a5ca703e14755",
+    "license_documents": [
+      {
+        "path": "xxHash-680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf/LICENSE",
+        "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a",
+        "size": 1389
+      },
+      {
+        "path": "xxHash-680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf/cli/COPYING",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "size": 18092
+      },
+      {
+        "path": "xxHash-680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf/tests/bench/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "size": 18092
+      },
+      {
+        "path": "xxHash-680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf/tests/collisions/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "size": 18092
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "xz",
+    "source_revision": "3d078b52adbff566ccfc51067dfbf742ecf3ef86",
+    "source_sha256": "1e34cffb6450e69d030f449dbba557d0ac66a6b06e436bdd391c5393a3d484fd",
+    "license_documents": [
+      {
+        "path": "xz-3d078b52adbff566ccfc51067dfbf742ecf3ef86/COPYING",
+        "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8",
+        "size": 3119
+      },
+      {
+        "path": "xz-3d078b52adbff566ccfc51067dfbf742ecf3ef86/COPYING.0BSD",
+        "sha256": "0b01625d853911cd0e2e088dcfb743261034a091bb379246cb25a14cc4c74bf1",
+        "size": 607
+      },
+      {
+        "path": "xz-3d078b52adbff566ccfc51067dfbf742ecf3ef86/COPYING.GPLv2",
+        "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+        "size": 17984
+      },
+      {
+        "path": "xz-3d078b52adbff566ccfc51067dfbf742ecf3ef86/COPYING.GPLv3",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "size": 35149
+      },
+      {
+        "path": "xz-3d078b52adbff566ccfc51067dfbf742ecf3ef86/COPYING.LGPLv2.1",
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "size": 26419
+      },
+      {
+        "path": "xz-3d078b52adbff566ccfc51067dfbf742ecf3ef86/build-aux/license-check.sh",
+        "sha256": "2b3fa1d23cb2ab084f3d919908159473cc0e1eed059d106e2a2857c0ec8af98a",
+        "size": 5127
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "0BSD",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "selection_boundary": "liblzma only per COPYING; xz/xzdec/lzmadec/lzmainfo disabled; GPL shell scripts/build-system files preserved as separately licensed Source, never approved as linked library code",
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "zlib",
+    "source_revision": "88601f0bdd192e9f87d4bd0a50d5d2e2dc9b8cd0",
+    "source_sha256": "ba09b6d7d45f0aaf6f58976fe943b3de2fd3b6e4ee9d7ebad93876ef12fbcc63",
+    "license_documents": [
+      {
+        "path": "zlib-ng-88601f0bdd192e9f87d4bd0a50d5d2e2dc9b8cd0/LICENSE.md",
+        "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee",
+        "size": 867
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "Zlib",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  },
+  {
+    "component": "zstd",
+    "source_revision": "49cf51799ea051457f57243527aa2058f999f005",
+    "source_sha256": "20b3aa4295de44d8ea74c0bedbd036364c9d82609325b660a4900becbd56383a",
+    "license_documents": [
+      {
+        "path": "zstd-49cf51799ea051457f57243527aa2058f999f005/COPYING",
+        "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+        "size": 18091
+      },
+      {
+        "path": "zstd-49cf51799ea051457f57243527aa2058f999f005/LICENSE",
+        "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+        "size": 1549
+      },
+      {
+        "path": "zstd-49cf51799ea051457f57243527aa2058f999f005/tests/test-license.py",
+        "sha256": "a0bd1837d89c90e45722ff2c109530f2d280fa8296732b1a86adea2054f08ee9",
+        "size": 4388
+      }
+    ],
+    "static_selection": "APPROVED_COMPATIBLE_BUILD_INPUT",
+    "final_compiled_linkage": "CI_QUALIFICATION_REQUIRED",
+    "patch_count": 0,
+    "selected_license": "BSD-3-Clause",
+    "scope": "Selected recipe inputs only; not final binary commercial approval",
+    "obligations": [
+      "Preserve all applicable file-level copyright and license notices",
+      "Provide exact source, modifications and build information for copyleft library portions",
+      "Validate final compiled/link set after CI before commercial adoption"
+    ],
+    "compatibility_review": "STATIC_RECIPE_LIBRARY_SELECTION_ONLY_FINAL_LINK_CI_GATE"
+  }
+]

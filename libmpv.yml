@@ -1,0 +1,135 @@
+{
+  "name": "SimMedia LGPL engine qualification",
+  "on": {
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "concurrency": {
+    "group": "simmedia-lgpl-engine",
+    "cancel-in-progress": false
+  },
+  "jobs": {
+    "gate": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 10,
+      "outputs": {
+        "image": "${{ steps.lock.outputs.image }}",
+        "runner_version": "${{ steps.lock.outputs.runner_version }}"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "id": "lock",
+          "shell": "bash",
+          "run": "set -euo pipefail\nimage=$(python3 -B ci.py gate --lock build-lock.json --root .)\nprintf \"image=%s\\n\" \"$image\" >> \"$GITHUB_OUTPUT\"\nprintf \"runner_version=%s\\n\" \"${ImageVersion:-container-pinned}\" >> \"$GITHUB_OUTPUT\""
+        }
+      ],
+      "container": {
+        "image": "ghcr.io/btbn/ffmpeg-builds/win64-lgpl@sha256:3a15bea9c0c2b555fb5e36e709f90aa453f1c217dfb97aaf69cb47691227d395"
+      },
+      "if": "${{ github.event.repository.private == false }}"
+    },
+    "build": {
+      "needs": "gate",
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 360,
+      "container": {
+        "image": "${{ needs.gate.outputs.image }}"
+      },
+      "env": {
+        "ImageVersion": "${{ needs.gate.outputs.runner_version }}"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "name": "Build and preserve evidence",
+          "shell": "bash",
+          "run": "set -euo pipefail\npython3 -B ci.py build --lock build-lock.json --root . --output evidence"
+        },
+        {
+          "name": "Pack generated Evidence only under 128MiB",
+          "id": "pack",
+          "if": "${{ always() }}",
+          "shell": "bash",
+          "run": "python3 -B ci.py pack --lock build-lock.json --root . --output evidence"
+        },
+        {
+          "name": "Transfer complete evidence only after successful packing",
+          "id": "handoff",
+          "if": "${{ always() && steps.pack.outcome == 'success' }}",
+          "uses": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "with": {
+            "name": "evidence-handoff-${{ github.run_id }}-${{ github.run_attempt }}",
+            "path": "handoff-assets/",
+            "if-no-files-found": "error",
+            "retention-days": 1,
+            "compression-level": 0
+          }
+        }
+      ],
+      "permissions": {
+        "contents": "read"
+      },
+      "outputs": {
+        "handoff_outcome": "${{ steps.handoff.outcome }}"
+      }
+    },
+    "release": {
+      "needs": [
+        "gate",
+        "build"
+      ],
+      "if": "${{ always() && needs.gate.result == 'success' && needs.build.outputs.handoff_outcome == 'success' }}",
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 45,
+      "container": {
+        "image": "${{ needs.gate.outputs.image }}"
+      },
+      "permissions": {
+        "contents": "write"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "name": "Download this run evidence only",
+          "uses": "actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "with": {
+            "name": "evidence-handoff-${{ github.run_id }}-${{ github.run_attempt }}",
+            "path": "handoff-assets"
+          }
+        },
+        {
+          "name": "Verify handoff and reconstruct exact Source without executing build code",
+          "shell": "bash",
+          "run": "python3 -B ci.py restore --lock build-lock.json --root ."
+        },
+        {
+          "name": "Save unqualified Source and Evidence to public Release",
+          "if": "${{ success() }}",
+          "shell": "bash",
+          "env": {
+            "GITHUB_TOKEN": "${{ github.token }}"
+          },
+          "run": "python3 -B ci.py publish --lock build-lock.json --root ."
+        }
+      ]
+    }
+  }
+}
