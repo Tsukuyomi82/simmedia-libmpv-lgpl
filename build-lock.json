@@ -2230,7 +2230,7 @@
       "transforms": []
     },
     "mujs": {
-      "url": "https://codeberg.org/ccxvii/mujs/archive/aab59f2c8136b55e8eef7a016d5a15fe8cf69f3f.tar.gz",
+      "url": "https://github.com/Tsukuyomi82/simmedia-libmpv-lgpl/releases/download/source-mujs-aab59f2c-ca0e083a/mujs.tar.gz",
       "revision": "aab59f2c8136b55e8eef7a016d5a15fe8cf69f3f",
       "archive_sha256": "ca0e083a45dea43070dd1b085841b6785d501ea14a2f80f686e13c792d2fe0ee",
       "archive_path": "source-inputs/mujs.tar.gz",
