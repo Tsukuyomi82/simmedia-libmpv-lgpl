@@ -99,24 +99,53 @@ def unpack(archive, target, strip_components=1, existing_empty=False):
                 dest.chmod(resolved.mode & 0o777)
 
 def acquire(item, root):
+    # Receipts contain no headers, exception text, credentials or query strings.
+    from urllib.parse import urlsplit
+    import uuid
+    def safe_url(value):
+        parsed = urlsplit(value)
+        public_aom = (parsed.scheme == 'https' and parsed.netloc == 'aomedia.googlesource.com'
+                      and re.fullmatch(r'/aom/\+archive/[0-9a-f]{40}\.tar\.gz', parsed.path)
+                      and not parsed.query and not parsed.fragment)
+        return value if public_aom else {'scheme': parsed.scheme, 'url_sha256': hashlib.sha256(value.encode()).hexdigest(), 'address': 'REDACTED'}
     path = root.joinpath(*PurePosixPath(item['archive_path']).parts)
     if path.is_symlink() or not path.parent.resolve().is_relative_to(root.resolve()):
         raise ValueError('BLOCKED: archive output escapes workspace')
-    if not path.exists():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        request = urllib.request.Request(item['url'], headers={'User-Agent': 'EF-Softworks-libmpv-CI'})
-        with urllib.request.urlopen(request, timeout=90) as source, path.open('xb') as out:
-            if not source.url.startswith('https://'):
-                raise ValueError('BLOCKED: insecure source redirect')
-            count = 0
-            for data in iter(lambda: source.read(1024 * 1024), b''):
-                count += len(data)
-                if count > item['archive_size']:
-                    raise ValueError('BLOCKED: source exceeds locked size')
-                out.write(data)
-    if path.stat().st_size != item['archive_size'] or ci.digest(path) != item['archive_sha256']:
-        raise ValueError('BLOCKED: source size/hash mismatch')
-    return path
+    evidence = Path(os.environ.get('CI_EVIDENCE_DIR', str(root / 'restored-evidence')))
+    receipts = evidence / 'acquisition-receipts'
+    receipts.mkdir(parents=True, exist_ok=True)
+    record = {'expected_size': item['archive_size'], 'expected_sha256': item['archive_sha256'],
+              'source_url': safe_url(item['url']), 'http_status': None, 'redirect_destination': None,
+              'mode': 'CACHE' if path.exists() else 'DOWNLOAD', 'received_size': 0, 'status': 'BLOCKED'}
+    try:
+        if not path.exists():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            request = urllib.request.Request(item['url'], headers={'User-Agent': 'EF-Softworks-libmpv-CI'})
+            with urllib.request.urlopen(request, timeout=90) as source, path.open('xb') as out:
+                record['http_status'] = source.getcode()
+                record['redirect_destination'] = safe_url(source.url)
+                if not source.url.startswith('https://'):
+                    raise ValueError('BLOCKED: insecure source redirect')
+                for data in iter(lambda: source.read(1024 * 1024), b''):
+                    record['received_size'] += len(data)
+                    if record['received_size'] > item['archive_size']:
+                        raise ValueError('BLOCKED: source exceeds locked size')
+                    out.write(data)
+        if path.stat().st_size != item['archive_size'] or ci.digest(path) != item['archive_sha256']:
+            raise ValueError('BLOCKED: source size/hash mismatch')
+        record['status'] = 'PASS'
+        return path
+    except Exception as error:
+        record['error_type'] = type(error).__name__
+        record['http_status'] = getattr(error, 'code', record['http_status'])
+        # Avoid urllib exception strings which may disclose signed URLs.
+        if isinstance(error, ValueError):
+            raise
+        raise ValueError('BLOCKED: source acquisition failed; see sanitized receipt') from None
+    finally:
+        record['actual_size'] = path.stat().st_size if path.is_file() else None
+        record['actual_sha256'] = ci.digest(path) if path.is_file() else None
+        ci.write_json(receipts / (str(uuid.uuid4()) + '.json'), record)
 
 def bootstrap(lock, root, evidence):
     (root / 'tools').mkdir(exist_ok=False)

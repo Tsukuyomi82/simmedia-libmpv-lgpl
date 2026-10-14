@@ -7,7 +7,7 @@
     "prepare.sh": "87d7cebb2d5af7c0dedc42d6ed79b9d8995bd33ea5560efb7fc2677c6103535c",
     "compile.sh": "1f9746935b2fc79dd0f7a27bf5404d1ee6419bf6886689ce7eeeb1665bfecdc5",
     "qualify.sh": "1ab0d73d4fb360b36c1136c578a4f6813438e1aa91c9290d6be94dccecdbade9",
-    "core.py": "7b26c3c5f4a165717d50509d7c3a456a829def4d26d973d248baddcd7e29594e",
+    "core.py": "34e55c87d743b402a107391ee844e14b7aaa2d1b1e98eb9a64ab9f7a00feba55",
     "ci.py": "769fd3626b577b1b1fc716d13408a11e707792563eceefc17b151125774b79f9",
     "graph-hook.cmake": "6da2a8ef36d0b0b3982af0409624039718e14243cc5a9a292150e54d9dcd53f1",
     "recipe-overlay-final-closure.tar": "56b1de84dee4b7dfa35ad3087446656498c9a28d30398ad446ffe5ffcbf35f03",
@@ -222,7 +222,7 @@
       "transforms": []
     },
     "aom": {
-      "url": "https://aomedia.googlesource.com/aom/+archive/8fbd65b2f354e1d7059f8b1899f3f0373d1b3e2a.tar.gz",
+      "url": "https://github.com/Tsukuyomi82/simmedia-libmpv-lgpl/releases/download/source-aom-8fbd65b2-5099e355/aom.tar.gz",
       "revision": "8fbd65b2f354e1d7059f8b1899f3f0373d1b3e2a",
       "archive_sha256": "5099e355572d29ca29633ebaf6cf1b9ffeb8d00eaca4976f905a0e9677a97443",
       "archive_path": "source-inputs/aom.tar.gz",
