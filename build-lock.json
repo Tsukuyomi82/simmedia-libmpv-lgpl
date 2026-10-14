@@ -1993,12 +1993,12 @@
       "transforms": []
     },
     "libvpx": {
-      "url": "https://chromium.googlesource.com/webm/libvpx/+archive/ed2a5b572f0f62a72d2e483dd3031841f08fb343.tar.gz",
+      "url": "https://github.com/Tsukuyomi82/simmedia-libmpv-lgpl/releases/download/sources-libvpx-libwebp-pinned/libvpx.tar.gz",
       "revision": "ed2a5b572f0f62a72d2e483dd3031841f08fb343",
       "archive_sha256": "787af8a23be968414b88feb53fc7d2d16742c0e0f40665c54a69c4efdd4f77ea",
       "archive_path": "source-inputs/libvpx.tar.gz",
       "archive_size": 5727011,
-      "strip_components": 1,
+      "strip_components": 0,
       "license": {
         "documents": [
           {
@@ -2050,12 +2050,12 @@
       "transforms": []
     },
     "libwebp": {
-      "url": "https://chromium.googlesource.com/webm/libwebp/+archive/1c85c37f93315054e6138cc94d1f58b60749833d.tar.gz",
+      "url": "https://github.com/Tsukuyomi82/simmedia-libmpv-lgpl/releases/download/sources-libvpx-libwebp-pinned/libwebp.tar.gz",
       "revision": "1c85c37f93315054e6138cc94d1f58b60749833d",
       "archive_sha256": "77955ab6e0d6f879e3675d952fa96d4e170b08b055282ea5357601f6084b6af1",
       "archive_path": "source-inputs/libwebp.tar.gz",
       "archive_size": 3907162,
-      "strip_components": 1,
+      "strip_components": 0,
       "license": {
         "documents": [
           {
