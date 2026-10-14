@@ -227,7 +227,7 @@
       "archive_sha256": "5099e355572d29ca29633ebaf6cf1b9ffeb8d00eaca4976f905a0e9677a97443",
       "archive_path": "source-inputs/aom.tar.gz",
       "archive_size": 6717815,
-      "strip_components": 1,
+      "strip_components": 0,
       "license": {
         "documents": [
           {
