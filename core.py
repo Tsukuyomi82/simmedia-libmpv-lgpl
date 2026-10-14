@@ -230,6 +230,28 @@ def environment(lock, root):
 def prepare(lock, root, evidence):
     bootstrap(lock, root, evidence)
     tools, env = environment(lock, root)
+    overlay = ci.confined(root, lock['recipe_overlay'])
+    if ci.digest(overlay) != lock['files'][lock['recipe_overlay']]:
+        raise ValueError('BLOCKED: recipe overlay differs')
+    unpack(overlay, root / 'recipe')
+    # The fixed overlay contains recipe/, not the local packaging name
+    # connected-recipe/. Resolve every external patch before Source preparation.
+    prepared_patches = {}
+    patch_inputs = []
+    for component in lock['active']:
+        for item in lock['sources'][component]['patches']:
+            rel = PurePosixPath(item['path'])
+            if (rel.is_absolute() or len(rel.parts) < 3 or rel.parts[0] != 'connected-recipe'
+                    or '..' in rel.parts or '\\' in item['path'] or ':' in item['path']):
+                raise ValueError('BLOCKED: external patch path is not a confined recipe input')
+            relative = PurePosixPath(*rel.parts[1:]).as_posix()
+            patch = ci.confined(root / 'recipe', relative)
+            if ci.digest(patch) != item['sha256']:
+                raise ValueError('BLOCKED: patch differs')
+            prepared_patches[item['path']] = relative
+            patch_inputs.append({'component': component, 'locked_path': item['path'],
+                                 'resolved_path': 'recipe/' + relative, 'sha256': item['sha256']})
+    ci.write_json(evidence / 'recipe-patch-inputs.json', patch_inputs)
     for name in ['home', 'sources', 'stage']:
         (root / name).mkdir(exist_ok=False)
     receipts = []
@@ -251,7 +273,7 @@ def prepare(lock, root, evidence):
         run([tools['git'], '-c', 'user.name=EF Softworks CI', '-c', 'user.email=ci@example.invalid',
              'commit', '-m', 'Imported exact source archive'], dest, evidence, name + '.git-base', env)
         for i, item in enumerate(s['patches']):
-            p = ci.confined(root, item['path'])
+            p = ci.confined(root / 'recipe', prepared_patches[item['path']])
             if ci.digest(p) != item['sha256']:
                 raise ValueError('BLOCKED: patch differs')
             run([tools['git'], 'apply', '--check', str(p)], dest, evidence, name + '.patch-check-' + str(i), env)
@@ -336,10 +358,6 @@ def prepare(lock, root, evidence):
             raise ValueError('BLOCKED: tool version differs ' + name)
         records[name] = {'sha256': ci.digest(Path(tools[name])), 'version_output': version}
     ci.write_json(evidence / 'toolchain-records.json', records)
-    overlay = ci.confined(root, lock['recipe_overlay'])
-    if ci.digest(overlay) != lock['files'][lock['recipe_overlay']]:
-        raise ValueError('BLOCKED: recipe overlay differs')
-    unpack(overlay, root / 'recipe')
     run([tools['cmake'], '-S', str(root / 'recipe'), '-B', str(root / 'build'), '-G', 'Ninja',
          '-DTARGET_ARCH=x86_64-w64-mingw32', '-DGCC_ARCH=x86-64', '-DCOMPILER_TOOLCHAIN=clang',
          '-DCMAKE_C_COMPILER=' + tools['host-cc'],
