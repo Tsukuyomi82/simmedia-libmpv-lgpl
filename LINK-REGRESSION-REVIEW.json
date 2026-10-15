@@ -1,0 +1,127 @@
+{
+  "baseline_commit": "8489c836a8ff2b4546c1a2948cc4a46b315fd7b3",
+  "previous_run": 38534604458,
+  "root_cause": "Stage scan and build-log capture rejected all symbolic links without resolving them. The old failure messages did not preserve the exact paths; retrospective targets remain UNKNOWN.",
+  "changes": [
+    "Reuse the existing validated Source-link resolver for stage and build-log links.",
+    "Record path, target, relative/absolute form, resolved path and root relation; reject unsafe links and changed aliases.",
+    "Preserve link structure as hashed data records and exact required log payloads, keeping Artifact transport free of filesystem links.",
+    "Retain Source/toolchain pin, library collision and Artifact link guards."
+  ],
+  "previous_exact_paths": "UNKNOWN; CI11 records actual observations without a diagnostic rerun.",
+  "tests": {
+    "kind": "Read-only in-memory targeted regressions using mocked filesystem links; native Linux behavior is a CI11 runtime gate.",
+    "status": "PASS",
+    "count": 25,
+    "results": [
+      {
+        "name": "old-stage-safe-link-rejection-reproduced",
+        "status": "PASS"
+      },
+      {
+        "name": "old-log-safe-link-rejection-reproduced",
+        "status": "PASS"
+      },
+      {
+        "name": "safe-internal-relative-stage-alias",
+        "status": "PASS"
+      },
+      {
+        "name": "receipt-retains-path-target-root-relation",
+        "status": "PASS"
+      },
+      {
+        "name": "internal-parent-components-accepted",
+        "status": "PASS"
+      },
+      {
+        "name": "binary-log-target-byte-preservation",
+        "status": "PASS"
+      },
+      {
+        "name": "binary-payload-hash-and-exact-bytes",
+        "status": "PASS"
+      },
+      {
+        "name": "absolute-link-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "rejection-receipt-written",
+        "status": "PASS"
+      },
+      {
+        "name": "outside-relative-link-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "nested-escape-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "cyclic-link-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "broken-link-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "metadata-link-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "non-directory-traversal-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "existing-Evidence-payload-overwrite-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "existing-link-receipt-overwrite-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "receipt-storage-failure-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "concurrent-link-change-rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "compile-stage-link-scan-connected",
+        "status": "PASS"
+      },
+      {
+        "name": "stage-scan-produces-link-receipts",
+        "status": "PASS"
+      },
+      {
+        "name": "build-log-link-scan-connected",
+        "status": "PASS"
+      },
+      {
+        "name": "modified-code-syntax",
+        "status": "PASS"
+      },
+      {
+        "name": "library-collision-and-artifact-link-rejection-retained",
+        "status": "PASS"
+      },
+      {
+        "name": "all-source-toolchain-license-storage-pins-unchanged",
+        "status": "PASS"
+      }
+    ]
+  },
+  "secret_scan": "PASS: modified public engine CI code and this review record; no product Source or credentials",
+  "unmodified": [
+    "Source archive URLs, Versions, sizes, SHA-256",
+    "Toolchain/container",
+    "Licenses and recipe patches",
+    "Workflow permissions and free storage controls"
+  ],
+  "filesystem_status": "WORK local directory read-only; original files unchanged; changes tested in memory and persisted through the approved GitHub connection."
+}

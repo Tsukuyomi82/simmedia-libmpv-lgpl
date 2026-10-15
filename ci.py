@@ -131,9 +131,12 @@ def preserve_failure_evidence(root, output):
     logs.mkdir(exist_ok=False)
     build = root / 'build'
     if build.exists():
+        build = confined(root, 'build')
         for source in sorted(build.rglob('*')):
             if source.is_symlink():
-                raise ValueError('BLOCKED: evidence log symlink')
+                capture_internal_link(build, source, output, 'build-logs',
+                                      copy_payload=source.suffix in ('.log', '.cmake'))
+                continue
             if source.is_file() and source.suffix in ('.log', '.cmake'):
                 target = logs / source.relative_to(build)
                 target.parent.mkdir(parents=True, exist_ok=True)
@@ -237,6 +240,49 @@ def source_link_record(source, file):
     return {'path': relative.as_posix(), 'type': 'symlink', 'target': target,
             'sha256': hashlib.sha256(target.encode('utf-8')).hexdigest(),
             'resolved_target': current.relative_to(source).as_posix()}, current
+
+
+
+def capture_internal_link(base, file, output, scope, copy_payload=False):
+    # Store the link graph as data, never as an executable/followed Evidence link.
+    relative = file.relative_to(base).as_posix()
+    folder = output / 'link-records' / scope
+    folder.mkdir(parents=True, exist_ok=True)
+    receipt = folder / (hashlib.sha256(relative.encode('utf-8')).hexdigest() + '.json')
+    details = {'absolute_path': str(file), 'path': str(file), 'allowed_root': str(base), 'relative_path': relative,
+               'target': None, 'target_form': None, 'resolved_path': None,
+               'inside_root': False, 'status': 'BLOCKED'}
+    try:
+        if base.is_symlink() or not base.is_dir():
+            raise ValueError('BLOCKED: link capture root is not a real directory')
+        details['target'] = os.readlink(file)
+        details['target_form'] = 'absolute' if os.path.isabs(details['target']) else 'relative'
+        record, target = source_link_record(base, file)
+        details.update(record)
+        details.update({'resolved_path': str(target), 'inside_root': True})
+        if target.is_file():
+            payload_hash = digest(target)
+            checked, checked_target = source_link_record(base, file)
+            if checked != record or checked_target != target:
+                raise ValueError('BLOCKED: link changed during capture')
+            details['target_sha256'] = payload_hash
+            if copy_payload:
+                dest = output / 'external-project-logs' / relative
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                with target.open('rb') as inp, dest.open('xb') as out:
+                    shutil.copyfileobj(inp, out)
+                again, final_target = source_link_record(base, file)
+                if again != record or final_target != target or digest(dest) != payload_hash:
+                    raise ValueError('BLOCKED: link payload changed during capture')
+                details['saved_payload'] = dest.relative_to(output).as_posix()
+        details['status'] = 'PASS'
+        write_json(receipt, details)
+        return details, target
+    except Exception as error:
+        details['reason'] = str(error)
+        if not receipt.exists():
+            write_json(receipt, details)
+        raise
 
 
 def save_final_source_state(lock, root, output):

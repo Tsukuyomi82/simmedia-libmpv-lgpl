@@ -393,17 +393,27 @@ def compile_(lock, root, evidence):
         visiting.remove(name); visited.add(name); order.append(name)
     visit('mpv')
     installed = {}
+    installed_links = {}
+    stage = ci.confined(root, 'stage')
     for name in order:
         run([tools['ninja'], '-C', str(root / 'build'), '-v', '-j2', name],
             root, evidence, 'compile.' + name, env)
-        for path in (root / 'stage').rglob('*'):
-            if not path.is_file():
+        for path in sorted(stage.rglob('*')):
+            candidate = path
+            if path.is_symlink():
+                record, candidate = ci.capture_internal_link(stage, path, evidence, 'stage-' + name)
+                identity = (record['target'], record.get('target_sha256'), record['resolved_target'])
+                key = path.relative_to(stage).as_posix()
+                if key in installed_links and installed_links[key] != identity:
+                    raise ValueError('BLOCKED: component changed installed link ' + key)
+                installed_links.setdefault(key, identity)
+            if not candidate.is_file():
                 continue
-            if path.is_symlink() or not path.resolve().is_relative_to((root / 'stage').resolve()):
-                raise ValueError('BLOCKED: installed library path escapes stage')
+            if not candidate.resolve(strict=True).is_relative_to(stage):
+                raise ValueError('BLOCKED: installed library path escapes stage ' + str(path))
             if path.suffix.lower() not in ('.a', '.lib', '.dll'):
                 continue
-            key = str(path.relative_to(root)); value = ci.digest(path)
+            key = str(path.relative_to(root)); value = ci.digest(candidate)
             if key in installed and installed[key]['sha256'] != value:
                 raise ValueError('BLOCKED: component overwrote installed library ' + key)
             installed.setdefault(key, {'component': name, 'sha256': value})
